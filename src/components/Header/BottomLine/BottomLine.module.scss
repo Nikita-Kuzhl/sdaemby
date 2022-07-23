@@ -1,0 +1,21 @@
+.container {
+  padding: 0 80px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.08);
+}
+.list {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+}
+.add__button {
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16.94px;
+  padding: 10px 18px;
+  color: white;
+  margin-left: auto;
+  border: none;
+  background: linear-gradient(90deg, #9d94ff 0%, #6b50e9 94.5%);
+  border-radius: 19px;
+}
