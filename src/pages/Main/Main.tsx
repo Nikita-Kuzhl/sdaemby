@@ -6,7 +6,7 @@ import Options from './components/Options/Options'
 import Presentation from './components/Presentation/Presentation'
 import Rent from './components/Rent/Rent'
 
-const MainPage = () => {
+const Main = () => {
   return (
     <>
       <DefaultLayout>
@@ -20,4 +20,4 @@ const MainPage = () => {
   )
 }
 
-export default MainPage
+export default Main
