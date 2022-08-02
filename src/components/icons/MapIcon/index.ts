@@ -1,3 +1,3 @@
-import MapIcon from "./MapIcon";
+import MapIcon from './MapIcon'
 
-export default MapIcon;
+export default MapIcon

@@ -1,13 +1,12 @@
-import Footer from './components/Footer';
-import Header from './components/Header';
+import { Route, Routes } from 'react-router-dom'
+import MainPage from './pages/MainPage'
 import './styles/index.scss'
 const App = () => {
   return (
-    <>
-      <Header />
-      <Footer />
-    </>
-  );
+    <Routes>
+      <Route path="/" element={<MainPage />} />
+    </Routes>
+  )
 }
 
-export default App;
+export default App

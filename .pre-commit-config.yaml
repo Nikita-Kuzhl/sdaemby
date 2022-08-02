@@ -1,0 +1,4 @@
+-repo: https://github.com/Nikita-Kuzhl/sdaemby
+ rev:""
+ hooks:
+  -id: prettier

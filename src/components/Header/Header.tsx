@@ -1,5 +1,5 @@
-import BottomLine from "./BottomLine/BottomLine"
-import TopLine from "./TopLine/TopLine"
+import BottomLine from './BottomLine/BottomLine'
+import TopLine from './TopLine/TopLine'
 
 const Header = () => {
   return (
