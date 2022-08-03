@@ -9,7 +9,7 @@ const TopLine = () => {
         <Link to="/" className={styles.list__item}>
           Главная
         </Link>
-        <Link to="/" className={styles.list__item}>
+        <Link to="/news" className={styles.list__item}>
           Новости
         </Link>
         <Link to="/" className={styles.list__item}>
@@ -19,7 +19,7 @@ const TopLine = () => {
           <MapIcon style={styles.mapicon} />
           Объявления на карте
         </Link>
-        <Link to="/" className={styles.list__item}>
+        <Link to="/contact" className={styles.list__item}>
           Контакты
         </Link>
       </ul>
