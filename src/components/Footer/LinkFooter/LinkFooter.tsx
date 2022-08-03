@@ -33,7 +33,7 @@ const LinkFooter = () => {
         </ul>
       </div>
       <ul className={styles.pages__list}>
-        <Link to="/" className={styles.pages__item}>
+        <Link to="/news" className={styles.pages__item}>
           Новости
         </Link>
         <Link to="/" className={styles.pages__item}>
@@ -42,7 +42,7 @@ const LinkFooter = () => {
         <Link to="/" className={styles.pages__item}>
           Объявления на карте
         </Link>
-        <Link to="/" className={styles.pages__item}>
+        <Link to="/contact" className={styles.pages__item}>
           Контакты
         </Link>
         <PayFooter />
