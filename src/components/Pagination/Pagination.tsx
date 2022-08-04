@@ -10,13 +10,13 @@ interface IProps {
 
 const Pagination: FC<IProps> = ({ currentPage, totalPages }) => {
   const dispatch = useAppDispatch()
-  const mas_pages: number[] = []
+  const masPages: number[] = []
   for (let i = 1; i <= totalPages; i++) {
-    mas_pages.push(i)
+    masPages.push(i)
   }
   return (
     <section className={styles.list}>
-      {mas_pages.map((i) => (
+      {masPages.map((i) => (
         <button
           onClick={() => dispatch(paginationAction.selectPage(i))}
           key={i}

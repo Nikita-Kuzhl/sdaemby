@@ -48,7 +48,7 @@ const Card = () => {
           </div>
           <ul className={styles.tag__list}>
             <p className={styles.tag}>
-              <img src="/assets/images/user.svg" alt="user" />
+              <img src='/assets/images/user.svg' alt='user' />
               {item.people} (2+2)
             </p>
             <p className={styles.tag}>{item.rooms} комн.</p>
@@ -56,30 +56,24 @@ const Card = () => {
           </ul>
         </ul>
         <div className={styles.street}>
-          <MapIcon width={12} height={15} color="#BDBDBD" />
+          <MapIcon width={12} height={15} color='#BDBDBD' />
           {`${item.city.name}, ${item.street}`}
         </div>
         <ul className={styles.metro__container}>
           <p className={styles.metro__item}>
-            <img src="/assets/images/metro.svg" alt="metro" />
+            <img src='/assets/images/metro.svg' alt='metro' />
             {item.metro[0].name}
           </p>
           {metro.map((item) => (
             <p className={styles.metro__item} key={item.id}>
               <svg
-                width="6"
-                height="7"
-                viewBox="0 0 6 7"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
+                width='6'
+                height='7'
+                viewBox='0 0 6 7'
+                fill='none'
+                xmlns='http://www.w3.org/2000/svg'
               >
-                <ellipse
-                  cx="2.75"
-                  cy="3.20732"
-                  rx="2.75"
-                  ry="2.84209"
-                  fill="#BDBDBD"
-                />
+                <ellipse cx='2.75' cy='3.20732' rx='2.75' ry='2.84209' fill='#BDBDBD' />
               </svg>
 
               {item.name}
@@ -90,11 +84,8 @@ const Card = () => {
       </main>
       <p className={styles.line}></p>
       <footer className={styles.footer}>
-        <button
-          className={styles.button__contact}
-          onClick={() => setOpen(!open)}
-        >
-          <img src="/assets/images/telephone.svg" alt="phone" />
+        <button className={styles.button__contact} onClick={() => setOpen(!open)}>
+          <img src='/assets/images/telephone.svg' alt='phone' />
           Контакты
         </button>
         {open && <ModalContact user={user} />}

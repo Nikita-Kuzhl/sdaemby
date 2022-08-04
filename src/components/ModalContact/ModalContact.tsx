@@ -17,13 +17,13 @@ const ModalContact: FC<IProps> = ({ user }) => {
       <h3 className={styles.telephone}>{user.telephone}</h3>
       <p className={styles.email}>{user.email}</p>
       <ul className={styles.list__social}>
-        <Link to="/" className={styles.viber}>
-          <ViberIcon color="white" />
+        <Link to='/' className={styles.viber}>
+          <ViberIcon color='white' />
         </Link>
-        <Link to="/" className={styles.whatsup}>
+        <Link to='/' className={styles.whatsup}>
           <WhatsUpIcon />
         </Link>
-        <Link to="/" className={styles.mail}>
+        <Link to='/' className={styles.mail}>
           <MailIcon />
         </Link>
       </ul>

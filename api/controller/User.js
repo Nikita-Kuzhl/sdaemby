@@ -4,6 +4,13 @@ const { User } = require('../db')
 class UserController {
   async signup(req, res) {
     const { login, password, email } = req.body
+    const confirmUser = await User.findOne({ where: { login } })
+    if (confirmUser)
+      return res.send({
+        message: 'Данный пользователь уже существует',
+        status: 402,
+        column: 'login',
+      })
     const hash_password = bcrypt.hashSync(password, 7)
     await User.create({
       login,
@@ -13,18 +20,23 @@ class UserController {
       telephone: '+375 (29) 291-14-44',
       avatar: '/avatar/boy.png',
     })
-    return res.send('Succes').status(200)
+    const user = await User.findOne({ where: { login } })
+    const token = jwt.sign({ id: user.id, login, email: email }, 'sdaem', {
+      expiresIn: '24h',
+    })
+    return res.send({ token: token, status: 200 })
   }
   async signin(req, res) {
     const { login, password } = req.body
     const user = await User.findOne({ where: { login } })
-    if (!user) return res.send('Пользователь не найден').status(402)
+    if (!user) return res.send({ message: 'Пользователь не найден', status: 402, column: 'login' })
     const confirmPass = bcrypt.compareSync(password, user.password)
-    if (!confirmPass) return res.send('Неверный пароль').status(402)
+    if (!confirmPass)
+      return res.send({ message: 'Неверный пароль', status: 402, column: 'password' })
     const token = jwt.sign({ id: user.id, login, email: user.email }, 'sdaem', {
       expiresIn: '24h',
     })
-    res.status(200).send({ token })
+    res.status(200).send({ token: token, status: 200 })
   }
   async getInfo(req, res) {
     const token = req.headers.authorization

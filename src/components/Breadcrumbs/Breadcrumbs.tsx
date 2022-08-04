@@ -10,8 +10,8 @@ const Breadcrumbs: FC<IProps> = ({ link }) => {
   return (
     <ul className={styles.container}>
       <div className={styles.item}>
-        <Link to="/" className={styles.item__home}>
-          <HomeIcon color="#4E64F9" width={12} height={12} />
+        <Link to='/' className={styles.item__home}>
+          <HomeIcon color='#4E64F9' width={12} height={12} />
         </Link>
         <span />
       </div>
@@ -27,7 +27,7 @@ const Breadcrumbs: FC<IProps> = ({ link }) => {
           <p key={i.name} className={styles.item__text}>
             {i.name}
           </p>
-        )
+        ),
       )}
     </ul>
   )

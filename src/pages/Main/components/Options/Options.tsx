@@ -15,9 +15,7 @@ const Options = () => {
           <button
             onClick={() => setHeading(item.name)}
             key={item.src}
-            className={`${styles.item} ${
-              heading === item.name ? styles.item__active : null
-            }`}
+            className={`${styles.item} ${heading === item.name ? styles.item__active : null}`}
           >
             {item.name}
           </button>

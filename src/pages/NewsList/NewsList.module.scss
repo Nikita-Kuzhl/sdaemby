@@ -7,7 +7,8 @@
   right: 0;
   position: absolute;
   width: 58%;
-  height: 1000px;
+  height: 100vh;
+  max-height: 1000px;
   background: linear-gradient(90deg, #94afff 0%, #4e64f9 94.5%);
   opacity: 0.1;
   border-radius: 40px 0px 0px 0px;

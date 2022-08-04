@@ -13,7 +13,7 @@ export const newsApi = createApi({
       query: (id) => ({ url: `/news/item/${id}` }),
     }),
     getThree: build.query<INewsItem[], null>({
-      query: () => ({ url: `/news/rand/` }),
+      query: () => ({ url: '/news/rand/' }),
     }),
   }),
 })
