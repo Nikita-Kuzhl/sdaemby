@@ -46,10 +46,10 @@ const Carousel = () => {
       </Swiper>
       <div className={styles.list__arrow}>
         <button className={styles.arrow} ref={(node) => setPrevEl(node)}>
-          <RightArrowIcon color="#664EF9" />
+          <RightArrowIcon color='#664EF9' />
         </button>
         <button className={styles.arrow} ref={(node) => setNextEl(node)}>
-          <RightArrowIcon color="#664EF9" />
+          <RightArrowIcon color='#664EF9' />
         </button>
       </div>
       <div className={styles.info}>
@@ -60,7 +60,7 @@ const Carousel = () => {
           <p className={styles.quantity__subtitle}>Предложений по Минску</p>
         </div>
         <button className={styles.catalog__button}>
-          Посмотреть все <RightArrowIcon color="white" />
+          Посмотреть все <RightArrowIcon color='white' />
         </button>
       </div>
     </section>

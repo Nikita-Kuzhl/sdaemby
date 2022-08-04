@@ -6,7 +6,7 @@ import TelephoneIcon from '../../components/icons/TelephoneIcon'
 import ViberIcon from '../../components/icons/ViberIcon'
 import VKIcon from '../../components/icons/VKIcon'
 import WhatsUpIcon from '../../components/icons/WhatsUpIcon'
-import DefaultLayout from '../../layouts/DefaultLayout'
+import DefaultLayout from '../../layouts/DefaultLayout/DefaultLayout'
 import ContactForm from './components/ContactForm/ContactForm'
 import styles from './Contact.module.scss'
 
@@ -18,13 +18,13 @@ const Contact = () => {
           <div className={styles.info__container}>
             <h1 className={styles.title}>Контакты</h1>
             <p className={styles.description}>
-              Если у Вас есть пожелания, предложения или претензии по
-              организации работы сайта мы всегда рады услышать Ваше мнение.
+              Если у Вас есть пожелания, предложения или претензии по организации работы сайта мы
+              всегда рады услышать Ваше мнение.
             </p>
             <ul className={styles.contact__list}>
               <div className={styles.contact__item}>
                 <div className={styles.contact__icon}>
-                  <MapIcon color="white" width={12} height={15} />
+                  <MapIcon color='white' width={12} height={15} />
                 </div>
                 <p className={styles.contact__text}>
                   220068, РБ, г. Минск, ул. Осипенко, 21, кв.23
@@ -32,7 +32,7 @@ const Contact = () => {
               </div>
               <div className={styles.contact__item}>
                 <div className={styles.contact__icon}>
-                  <TelephoneIcon color="white" />
+                  <TelephoneIcon color='white' />
                 </div>
                 <p className={styles.contact__text}>+375 29 621-48-33 </p>
                 <ul className={styles.contact__social}>
@@ -40,7 +40,7 @@ const Contact = () => {
                     <ViberIcon />
                   </div>
                   <div className={styles.contact__icon}>
-                    <img src="/assets/images/telegram.svg" alt="telegram" />
+                    <img src='/assets/images/telegram.svg' alt='telegram' />
                   </div>
 
                   <div className={styles.contact__icon}>
@@ -50,7 +50,7 @@ const Contact = () => {
               </div>
               <div className={styles.contact__item}>
                 <div className={styles.contact__icon}>
-                  <MailIcon width={15} height={12} color="white" />
+                  <MailIcon width={15} height={12} color='white' />
                 </div>
                 <p className={styles.contact__text}>
                   <u>sdaem@sdaem.by</u>
@@ -58,7 +58,7 @@ const Contact = () => {
               </div>
               <div className={styles.contact__item}>
                 <div className={styles.contact__icon}>
-                  <img src="/assets/images/clock.svg" alt="clock" />
+                  <img src='/assets/images/clock.svg' alt='clock' />
                 </div>
                 <p className={styles.contact__text}>
                   <span>Режим работы:</span> 08:00-22:00
@@ -70,23 +70,22 @@ const Contact = () => {
               <br /> УНП 192602485 Минским горисполкомом 10.02.2016
             </p>
             <div className={styles.warning}>
-              <img src="/assets/images/exclamation.svg" alt="exclamation" />
+              <img src='/assets/images/exclamation.svg' alt='exclamation' />
               <p className={styles.warning__text}>
-                Администрация сайта не владеет информацией о наличии свободных
-                квартир
+                Администрация сайта не владеет информацией о наличии свободных квартир
               </p>
             </div>
           </div>
           <ContactForm />
           <ul className={styles.social__container}>
             <div className={styles.social__icon}>
-              <InstIcon color="white" />
+              <InstIcon color='white' />
             </div>
             <div className={styles.social__icon}>
-              <VKIcon color="white" />
+              <VKIcon color='white' />
             </div>
             <div className={styles.social__icon}>
-              <FacebookIcon color="white" />
+              <FacebookIcon color='white' />
             </div>
           </ul>
         </div>

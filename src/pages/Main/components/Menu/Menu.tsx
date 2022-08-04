@@ -36,7 +36,7 @@ const Menu: FC<IProps> = ({ heading }) => {
             <p className={styles.item__title}>Город</p>
             <Select
               className={styles.item__select}
-              placeholder="Выберите"
+              placeholder='Выберите'
               options={city.map((item) => {
                 return { value: item.href, label: item.name }
               })}
@@ -48,7 +48,7 @@ const Menu: FC<IProps> = ({ heading }) => {
               {heading === 'Авто напрокат' ? 'Кол-во дверей' : 'Комнаты'}
             </p>
             <Select
-              placeholder="Выбирете"
+              placeholder='Выбирете'
               className={styles.item__select}
               options={heading === 'Авто напрокат' ? carsList : apartmentList}
             />
@@ -56,17 +56,9 @@ const Menu: FC<IProps> = ({ heading }) => {
           <div className={styles.item} style={{ width: 215 }}>
             <p className={styles.item__title}>Цена за сутки (BYN)</p>
             <div className={styles.price__container}>
-              <input
-                type="text"
-                placeholder="От"
-                className={styles.input__price}
-              />
+              <input type='text' placeholder='От' className={styles.input__price} />
               -
-              <input
-                type="text"
-                placeholder="До"
-                className={styles.input__price}
-              />
+              <input type='text' placeholder='До' className={styles.input__price} />
             </div>
           </div>
           <div className={styles.item}>
@@ -76,9 +68,9 @@ const Menu: FC<IProps> = ({ heading }) => {
           </div>
           <div className={styles.item}>
             <p className={styles.title}>
-              На карте <MapIcon color="#664EF9" width={12} height={15} />
+              На карте <MapIcon color='#664EF9' width={12} height={15} />
             </p>
-            <button type="submit" className={styles.item__button}>
+            <button type='submit' className={styles.item__button}>
               Показать <RightArrowIcon />
             </button>
           </div>

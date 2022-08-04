@@ -32,7 +32,7 @@ const Presentation = () => {
             <h1 className={styles.title}>Коттеджи и усадьбы</h1>
 
             <Link to={'/cottage'} className={styles.arrow__icon}>
-              <RightArrowIcon color="#FFFFFF" />
+              <RightArrowIcon color='#FFFFFF' />
             </Link>
           </div>
           <div
@@ -45,7 +45,7 @@ const Presentation = () => {
             <p className={styles.subtitle}>Попариться в бане с друзьями</p>
             <h1 className={styles.title}>Бани и сауны</h1>
             <Link to={'/bath'} className={styles.arrow__icon}>
-              <RightArrowIcon color="#FFFFFF" />
+              <RightArrowIcon color='#FFFFFF' />
             </Link>
           </div>
 
@@ -53,7 +53,7 @@ const Presentation = () => {
             <p className={styles.subtitle}>Если срочно нужна машина</p>
             <h1 className={styles.title}>Авто на прокат</h1>
             <Link to={'/auto'} className={styles.arrow__icon}>
-              <RightArrowIcon color="#FFFFFF" />
+              <RightArrowIcon color='#FFFFFF' />
             </Link>
           </div>
         </div>

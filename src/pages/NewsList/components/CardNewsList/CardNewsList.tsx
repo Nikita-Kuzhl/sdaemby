@@ -23,9 +23,7 @@ const CardNewsList: FC<IProps> = ({ news }) => {
       </main>
       <p className={styles.line}></p>
       <footer className={styles.footer}>
-        <p className={styles.date}>
-          {news.date.toLowerCase().substring(0, news.date.length - 2)}
-        </p>
+        <p className={styles.date}>{news.date.toLowerCase().substring(0, news.date.length - 2)}</p>
         <Link className={styles.link} to={`/news/${news.id}`}>
           Читать
         </Link>

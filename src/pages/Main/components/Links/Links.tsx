@@ -12,13 +12,8 @@ const Links = () => {
         <h3 className={styles.title}>Квартиры</h3>
         <ul className={styles.list}>
           {city.map((item) => (
-            <Link
-              key={item.href}
-              to={`/catalog/${item.href}`}
-              className={styles.item}
-            >
-              Квартиры в {item.name}{' '}
-              <p className={styles.quantity}>{item.quantity}</p>
+            <Link key={item.href} to={`/catalog/${item.href}`} className={styles.item}>
+              Квартиры в {item.name} <p className={styles.quantity}>{item.quantity}</p>
             </Link>
           ))}
         </ul>
@@ -26,11 +21,7 @@ const Links = () => {
       <h3 className={styles.title}>Коттеджи и усадьбы</h3>
       <ul className={styles.list}>
         {cottage.map((item) => (
-          <Link
-            key={item.href}
-            to={`/catalog/${item.href}`}
-            className={styles.item}
-          >
+          <Link key={item.href} to={`/catalog/${item.href}`} className={styles.item}>
             {item.name} <p className={styles.quantity}>{item.quantity}</p>
           </Link>
         ))}
@@ -40,26 +31,16 @@ const Links = () => {
           <h3 className={styles.title}>Бани и сауны</h3>
           <ul className={styles.list}>
             {city.map((item) => (
-              <Link
-                key={item.href}
-                to={`/catalog/${item.href}`}
-                className={styles.item}
-              >
-                Бани и сауны в {item.name}{' '}
-                <p className={styles.quantity}>{item.quantity}</p>
+              <Link key={item.href} to={`/catalog/${item.href}`} className={styles.item}>
+                Бани и сауны в {item.name} <p className={styles.quantity}>{item.quantity}</p>
               </Link>
             ))}
           </ul>
           <h3 className={styles.title}>Авто на прокат</h3>
           <ul className={styles.list}>
             {city.map((item) => (
-              <Link
-                key={item.href}
-                to={`/catalog/${item.href}`}
-                className={styles.item}
-              >
-                Авто на прокат в {item.name}{' '}
-                <p className={styles.quantity}>{item.quantity}</p>
+              <Link key={item.href} to={`/catalog/${item.href}`} className={styles.item}>
+                Авто на прокат в {item.name} <p className={styles.quantity}>{item.quantity}</p>
               </Link>
             ))}
           </ul>
@@ -67,7 +48,7 @@ const Links = () => {
       ) : (
         <button onClick={() => setOpen(true)} className={styles.button__yet}>
           Ещё
-          <RightArrowIcon style={styles.icon} color="#FEB700" />
+          <RightArrowIcon style={styles.icon} color='#FEB700' />
         </button>
       )}
       <h3 className={styles.title}>Популярные направления</h3>

@@ -1,0 +1,10 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+  min-height: 100vh;
+  min-width: 100vw;
+  background: url(../../assets/images/bg.png), linear-gradient(0deg, #7e6af3 1.04%, #6540cd 100%);
+  background-position: center;
+}

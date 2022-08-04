@@ -1,5 +1,5 @@
 import React from 'react'
-import DefaultLayout from '../../layouts/DefaultLayout'
+import DefaultLayout from '../../layouts/DefaultLayout/DefaultLayout'
 import Map from './components/Map/Map'
 import News from './components/News/NewsMain'
 import Options from './components/Options/Options'

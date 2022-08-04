@@ -49,3 +49,24 @@
   font-weight: 500;
   line-height: 16.94px;
 }
+.user {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+.user__img {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+}
+.user__name {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #1e2123;
+}
+.user__icon {
+  transform: rotate(90deg);
+  cursor: pointer;
+}
