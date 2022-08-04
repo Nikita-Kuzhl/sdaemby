@@ -2,12 +2,20 @@ import { FC, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { city } from '../../../constant/Link'
 import MapIcon from '../../icons/MapIcon'
-import styles from './Select.module.scss'
-interface IProps {
-  title?: any
+import styles from './HeaderSelect.module.scss'
+
+interface ITitle {
+  name: string
+  iconMap: boolean
+  href: string
+  src: string
 }
 
-const Select: FC<IProps> = ({ title }) => {
+interface IProps {
+  title?: ITitle
+}
+
+const HeaderSelect: FC<IProps> = ({ title }) => {
   const [open, setOpen] = useState(false)
 
   const rootEl = useRef(null)
@@ -24,12 +32,12 @@ const Select: FC<IProps> = ({ title }) => {
     <>
       <button onClick={() => setOpen(!open)} className={styles.title}>
         {title.name}
-        {title.iconMap && <MapIcon width={12} height={15} color="#FFD54F" />}
+        {title.iconMap && <MapIcon width={12} height={15} color='#FFD54F' />}
       </button>
       {open && (
         <ul ref={rootEl} className={styles.list}>
           {city.map((item) => (
-            <Link to="/" className={styles.list__item} key={item.href}>
+            <Link to='/' className={styles.list__item} key={item.href}>
               {title.src} {item.name}
             </Link>
           ))}
@@ -39,4 +47,4 @@ const Select: FC<IProps> = ({ title }) => {
   )
 }
 
-export default Select
+export default HeaderSelect

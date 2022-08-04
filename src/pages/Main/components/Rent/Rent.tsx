@@ -5,7 +5,7 @@ import styles from './Rent.module.scss'
 const Rent = () => {
   return (
     <>
-      <CircleGroupIcon style={styles.circle_group} color="#FFD54F" />
+      <CircleGroupIcon style={styles.circle_group} color='#FFD54F' />
       <div className={styles.bg} />
       <section className={styles.container}>
         <RentHeader />

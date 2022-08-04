@@ -8,13 +8,13 @@ const SocialFooter = () => {
       <div className={styles.social}>
         <h1 className={styles.social__title}>Мы в соцсетях</h1>
         <ul className={styles.social__list}>
-          <a className="icons" href="https://www.instagram.com">
+          <a className='icons' href='https://www.instagram.com'>
             <InstIcon />
           </a>
-          <a className="icons" href="https://vk.com/sdaem_by">
+          <a className='icons' href='https://vk.com/sdaem_by'>
             <VKIcon />
           </a>
-          <a className="icons" href="https://ru-ru.facebook.com/">
+          <a className='icons' href='https://ru-ru.facebook.com/'>
             <FacebookIcon />
           </a>
         </ul>

@@ -16,7 +16,7 @@ class NewsController {
             currentPage: Number(page),
           })
           .status(200),
-      2000
+      2000,
     )
   }
   async add(req, res) {

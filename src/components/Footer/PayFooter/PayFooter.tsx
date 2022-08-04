@@ -19,12 +19,7 @@ const PayFooter = () => {
   return (
     <ul className={styles.list}>
       {payList.map((item) => (
-        <img
-          key={item.alt}
-          src={item.src}
-          alt={item.alt}
-          height={item.height}
-        />
+        <img key={item.alt} src={item.src} alt={item.alt} height={item.height} />
       ))}
     </ul>
   )

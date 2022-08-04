@@ -24,13 +24,13 @@ const RentHeader = () => {
           className={styles.select}
           placeholder={
             <>
-              <img src="/assets/images/metro.svg" alt="metro" />
+              <img src='/assets/images/metro.svg' alt='metro' />
               Метро
             </>
           }
           options={metro}
         />
-        <Select className={styles.select} placeholder="Район" options={area} />
+        <Select className={styles.select} placeholder='Район' options={area} />
       </div>
     </section>
   )

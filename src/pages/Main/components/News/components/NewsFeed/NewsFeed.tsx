@@ -26,7 +26,7 @@ const NewsFeed = () => {
         ))}
       </ul>
       <button className={styles.button}>
-        Посмотреть все <RightArrowIcon color="#664EF9" />
+        Посмотреть все <RightArrowIcon color='#664EF9' />
       </button>
     </section>
   )

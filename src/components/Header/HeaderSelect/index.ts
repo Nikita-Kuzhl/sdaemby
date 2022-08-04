@@ -1,3 +1,3 @@
-import Select from './Select'
+import HeaderSelect from './HeaderSelect'
 
-export default Select
+export default HeaderSelect

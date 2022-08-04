@@ -3,7 +3,7 @@ import Logo from '../../../assets/images/logo.png'
 const ContactFooter = () => {
   return (
     <section className={styles.container}>
-      <img className={styles.logo} src={Logo} alt="logo footer" />
+      <img className={styles.logo} src={Logo} alt='logo footer' />
       <p className={styles.logo__text}>СДАЁМ БАЙ</p>
       <p className={styles.description}>
         ИП Шушкевич Андрей Викторович <br />

@@ -6,7 +6,7 @@ import styles from './News.module.scss'
 const News = () => {
   return (
     <section className={styles.container}>
-      <CircleGroupIcon style={styles.circle} color="#FFD54F" />
+      <CircleGroupIcon style={styles.circle} color='#FFD54F' />
 
       <main className={styles.main}>
         <ApartmentsMinsk />

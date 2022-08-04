@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import Breadcrumbs from '../../../../components/Breadcrumbs'
 import styles from './HeaderNewsList.module.scss'
@@ -18,16 +17,11 @@ const HeaderNewsList = () => {
         <input
           {...register('value')}
           className={styles.search__input}
-          type="text"
-          placeholder="Поиск по статьям"
+          type='text'
+          placeholder='Поиск по статьям'
         />
-        <button type="submit" className={styles.search__icon}>
-          <img
-            width={17}
-            height={17}
-            src="/assets/images/search.svg"
-            alt="search"
-          />
+        <button type='submit' className={styles.search__icon}>
+          <img width={17} height={17} src='/assets/images/search.svg' alt='search' />
         </button>
       </form>
     </header>
