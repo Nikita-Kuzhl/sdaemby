@@ -16,6 +16,7 @@
   border: none;
   transition: 0.05s;
 }
+
 .icon {
   color: #686868;
   position: absolute;
@@ -24,8 +25,9 @@
   margin-left: 20px;
 }
 .input:focus {
-  border: 2px solid rgba(78, 100, 249, 0.8);
+  border: 2px solid rgb(78 100 249 / 80%);
 }
+
 .warning__icon {
   margin-top: -35px;
   margin-left: 120px;

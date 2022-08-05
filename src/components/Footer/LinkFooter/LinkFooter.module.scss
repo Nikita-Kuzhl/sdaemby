@@ -1,10 +1,12 @@
 .container {
   display: flex;
 }
+
 .title__list {
   display: flex;
   flex-direction: column;
 }
+
 .title__item {
   font-weight: 700;
   font-size: 14px;
@@ -15,6 +17,7 @@
 .apartaments {
   margin-left: -30px;
 }
+
 .apartaments__title {
   font-weight: 700;
   font-size: 14px;
@@ -22,6 +25,7 @@
   color: #1e2123;
   margin-bottom: 12px;
 }
+
 .apartaments__list {
   display: flex;
   flex-direction: column;
@@ -31,18 +35,21 @@
   justify-content: space-between;
   width: 390px;
 }
+
 .apartaments__item {
   font-weight: 400;
   font-size: 14px;
   line-height: 17px;
   color: #8291a3;
 }
+
 .pages__list {
   display: flex;
   flex-direction: column;
   margin-left: 50px;
   margin-top: 5px;
 }
+
 .pages__item {
   font-weight: 400;
   font-size: 14px;

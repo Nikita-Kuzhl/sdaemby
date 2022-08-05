@@ -4,8 +4,9 @@
   height: 500px;
   background: #fffefe;
   border-radius: 10px;
-  box-shadow: (0px 20px 20px rgba(39, 95, 158, 0.15));
+  box-shadow: (0 20px 20px rgba(39, 95, 158, 0.15));
 }
+
 .header {
   display: flex;
   justify-content: center;
@@ -14,6 +15,7 @@
   border-radius: 10px;
   height: 226px;
 }
+
 .img {
   border-radius: 10px;
   width: 100%;
@@ -22,12 +24,14 @@
 .main {
   margin: 30px 20px 25px;
 }
+
 .title {
   font-weight: 700;
   font-size: 16px;
   line-height: 19px;
   color: #1e2123;
 }
+
 .description {
   margin-top: 15px;
   font-weight: 400;
@@ -35,23 +39,26 @@
   line-height: 17px;
   color: #8291a3;
   height: 84px;
-  display: -webkit-box;
+  display: flex;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
   line-clamp: 5;
 }
+
 .line {
   margin: 0 20px;
   background: #664ef9;
   opacity: 0.1;
   height: 2px;
 }
+
 .footer {
   display: flex;
-  margin: 20px 20px 0px;
+  margin: 20px 20px 0;
   justify-content: space-between;
 }
+
 .date {
   font-weight: 500;
   font-size: 14px;
@@ -62,12 +69,13 @@
   background: #f8f8f8;
   border-radius: 18px;
 }
+
 .link {
   font-weight: 700;
   font-size: 14px;
   line-height: 17px;
   color: #664ef9;
   padding: 10px 15px;
-  background: rgba(102, 78, 249, 0.1);
+  background: rgba(102, 78, 49, 0.1);
   border-radius: 17px;
 }

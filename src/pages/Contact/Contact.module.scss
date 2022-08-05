@@ -3,6 +3,7 @@
   background-position: center;
   background-size: 200%;
 }
+
 .container {
   margin: 0 auto;
   min-height: 600px;
@@ -14,12 +15,14 @@
 .info__container {
   width: 530px;
 }
+
 .title {
   font-weight: 700;
   font-size: 30px;
   line-height: 100%;
   color: white;
 }
+
 .description {
   margin-top: 30px;
   font-weight: 500;
@@ -27,19 +30,22 @@
   line-height: 24px;
   color: white;
 }
+
 .contact__list {
   margin-top: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: flex-start;
   vertical-align: center;
 }
+
 .contact__item {
   margin-top: 12px;
   display: flex;
   gap: 20px;
-  justify-content: start;
+  justify-content: flex-start;
 }
+
 .contact__icon {
   width: 30px;
   height: 30px;
@@ -49,20 +55,24 @@
   justify-content: center;
   align-items: center;
 }
+
 .contact__text {
   font-weight: 400;
   font-size: 18px;
   line-height: 27px;
   color: white;
+
   span {
     font-size: 18px;
     font-weight: 300;
   }
 }
+
 .contact__social {
   display: flex;
   gap: 10px;
 }
+
 .boss {
   margin-top: 30px;
   font-weight: 400;
@@ -70,6 +80,7 @@
   line-height: 21px;
   color: white;
 }
+
 .warning {
   width: 515px;
   margin-top: 35px;
@@ -80,18 +91,21 @@
   align-items: center;
   padding: 21px 10px 21px 25px;
 }
+
 .warning__text {
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
-  color: #ffffff;
+  color: #fff;
   width: 80%;
 }
+
 .social__container {
   display: flex;
   flex-direction: column;
   margin-left: 50px;
 }
+
 .social__icon {
   margin-top: 15px;
   width: 45px;

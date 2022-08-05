@@ -3,18 +3,21 @@
   flex-direction: column;
   width: 585px;
 }
+
 .title {
   margin-top: 40px;
   font-weight: 700;
   font-size: 18px;
   line-height: 22px;
-  color: #333333;
+  color: #333;
 }
+
 .list {
   display: flex;
   flex-direction: column;
   margin-top: 5px;
 }
+
 .item {
   margin-top: 10px;
   font-weight: 400;
@@ -28,6 +31,7 @@
 .item:hover {
   padding-left: 10px;
 }
+
 .quantity {
   font-weight: 400;
   font-size: 14px;
@@ -38,6 +42,7 @@
 .apartments {
   margin-top: -40px;
 }
+
 .button__yet {
   text-align: left;
   margin-top: 15px;
