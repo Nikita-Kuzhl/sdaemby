@@ -2,10 +2,12 @@
   margin-top: 55px;
   margin: 0 auto;
 }
+
 .myswiper {
   // padding-left: 80px;
   padding-right: 80px;
 }
+
 [class$='swiper-wrapper'] {
   padding-top: 60px;
   padding-bottom: 38px;
@@ -17,6 +19,7 @@
 .swiper__slide {
   width: 406px;
 }
+
 .arrow {
   display: flex;
   border: 1px solid #664ef9;
@@ -29,12 +32,14 @@
 .arrow:active {
   background: rgba(102, 78, 249, 0.1);
 }
+
 .list__arrow {
   display: flex;
   gap: 13px;
   justify-content: center;
   position: relative;
 }
+
 .info {
   display: flex;
   align-items: center;
@@ -53,8 +58,10 @@
   span {
     color: #664ef9;
   }
+
   align-items: center;
 }
+
 .quantity__subtitle {
   font-weight: 500;
   font-size: 14px;
@@ -62,21 +69,23 @@
   color: #8291a3;
   opacity: 0.6;
 }
+
 .catalog__button {
   font-weight: 700;
   font-size: 14px;
   line-height: 17px;
-  color: #ffffff;
-  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   padding: 10px 18px;
   background: linear-gradient(90deg, #9d94ff 0%, #6b50e9 94.5%);
-  box-shadow: 0px 15px 40px rgba(0, 96, 206, 0.15);
+  box-shadow: 0 15px 40px rgba(0, 96, 206, 0.15);
   border-radius: 17px;
   display: flex;
   align-items: center;
   gap: 12.5px;
 }
+
 .catalog__button:hover {
   background: linear-gradient(90deg, #867cfc 0%, #6929f3 94.5%);
-  box-shadow: 0px 15px 40px rgba(0, 96, 206, 0.15);
+  box-shadow: 0 15px 40px rgba(0, 96, 206, 0.15);
 }

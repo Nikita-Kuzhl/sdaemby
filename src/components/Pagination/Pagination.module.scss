@@ -3,16 +3,18 @@
   align-items: center;
   gap: 14px;
 }
+
 .item {
   font-weight: 400;
   font-size: 18px;
   line-height: 22px;
   color: #686868;
 }
+
 .item__active {
   font-weight: 700;
   font-size: 18px;
   line-height: 22px;
-  color: #000000;
+  color: #000;
   border-bottom: 2px solid #ffd54f;
 }

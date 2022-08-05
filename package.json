@@ -14,11 +14,13 @@
     "@types/node": "^16.7.13",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
+    "@types/react-google-recaptcha": "^2.1.5",
     "axios": "^0.27.2",
     "clsx": "^1.2.1",
     "node-sass": "^7.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-google-recaptcha": "^2.1.0",
     "react-hook-form": "^7.34.0",
     "react-is": "^18.2.0",
     "react-redux": "^8.0.2",
@@ -39,12 +41,13 @@
     "eject": "react-scripts eject",
     "check": "prettier --check .",
     "write": "prettier --write .",
+    "fix": "prettier --fix .",
     "lint": "./node_modules/.bin/eslint \"**/*.{ts,tsx}\"",
     "lint:fix": "./node_modules/.bin/eslint --fix \"**/*.{ts,tsx}\""
   },
   "husky": {
     "hooks": {
-      "pre-commit": "prettier --write . && eslint --fix . && git add -A ."
+      "pre-commit": "prettier --write . && prettier . --fix  && eslint --fix . && git add -A ."
     }
   },
   "eslintConfig": {

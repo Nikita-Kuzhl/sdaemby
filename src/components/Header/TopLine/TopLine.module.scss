@@ -5,10 +5,12 @@
   display: flex;
   align-items: center;
 }
+
 .list {
   display: flex;
   gap: 57px;
 }
+
 .list__item {
   font-weight: 400;
   font-size: 14px;
@@ -20,6 +22,7 @@
   padding: 9px 0;
   border-bottom: 3px solid transparent;
 }
+
 .list__item:hover {
   transition: 0.3 ease;
   border-bottom: 3px solid #ffd54f;
@@ -28,11 +31,13 @@
   font-size: 14px;
   line-height: 16.94px;
 }
+
 .action__list {
   margin-left: auto;
   display: flex;
   gap: 40px;
 }
+
 .sub {
   color: #8291a3;
   display: flex;
@@ -49,23 +54,27 @@
   font-weight: 500;
   line-height: 16.94px;
 }
+
 .user {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 15px;
 }
+
 .user__img {
   border-radius: 50%;
   width: 30px;
   height: 30px;
 }
+
 .user__name {
   font-weight: 500;
   font-size: 14px;
   line-height: 17px;
   color: #1e2123;
 }
+
 .user__icon {
   transform: rotate(90deg);
   cursor: pointer;

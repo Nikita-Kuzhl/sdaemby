@@ -2,36 +2,39 @@
   width: 1060px;
   height: 100px;
   background-color: #fff;
-  border-radius: 0px 10px 10px 10px;
+  border-radius: 0 10px 10px;
   margin-left: 155px;
 }
 .list {
   display: flex;
 }
+
 .item {
-  padding: 0px 20px 0px 20px;
+  padding: 0 20px;
   border-right: 1px solid rgba(102, 78, 249, 0.1);
   margin: 16px 0;
 }
+
 .item:last-child {
   border-right: none;
   display: flex;
   gap: 35px;
   padding-left: 32px;
 }
+
 .item__title {
   font-weight: 500;
   font-size: 14px;
   line-height: 17px;
   color: #bdbdbd;
 }
+
 .item__select {
   padding-top: 11px;
   cursor: pointer;
 
   [class$='control'] {
     background-color: #f8f8f8;
-
     border-radius: 20px;
     border: 0;
     box-shadow: none;
@@ -46,14 +49,16 @@
   [class$='indicatorSeparator'] {
     display: none;
   }
+
   [class$='menu'] {
-    background: #ffffff;
-    box-shadow: 0px 0px 40px rgba(135, 124, 202, 0.3);
+    background: #fff;
+    box-shadow: 0 0 40px rgba(135, 124, 202, 0.3);
     border-radius: 10px;
     font-weight: 500;
     font-size: 14px;
     line-height: 17px;
   }
+
   [class$='placeholder'] {
     font-weight: 500;
     font-size: 14px;
@@ -74,18 +79,21 @@
 .input__price:focus {
   border: 2px solid rgba(102, 78, 249, 0.8);
 }
+
 .input__price::placeholder {
   font-weight: 500;
   font-size: 14px;
   line-height: 17px;
   color: #686868;
 }
+
 .price__container {
   display: flex;
   align-items: center;
   gap: 4px;
   margin-top: 10px;
 }
+
 .title {
   font-weight: 500;
   font-size: 14px;
@@ -96,6 +104,7 @@
   padding-top: 25px;
   cursor: pointer;
 }
+
 .item__button {
   cursor: pointer;
   background: #ffd54f;
@@ -118,18 +127,19 @@
 .item__button:hover {
   background: #fec100;
 }
+
 .button {
   cursor: pointer;
   padding: 13px 20px;
   font-weight: 600;
   font-size: 14px;
   line-height: 17px;
-  color: #ffffff;
+  color: #fff;
   background: rgba(45, 57, 136, 0.5);
 }
 .button:last-child {
-  border-radius: 0px 10px 0px 0px;
+  border-radius: 0 10px 0 0;
 }
 .button:first-child {
-  border-radius: 10px 0px 0px 0px;
+  border-radius: 10px 0 0;
 }
