@@ -1,0 +1,35 @@
+.container {
+  width: 406px;
+  height: 330px;
+  padding: 50px;
+  text-align: center;
+  background: #fffefe;
+  box-shadow: 0px 20px 40px rgba(39, 95, 158, 0.2);
+  border-radius: 10px;
+}
+.title {
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 30px;
+
+  color: #000000;
+}
+.text {
+  margin-top: 20px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #686868;
+  margin-bottom: 20px;
+}
+.button {
+  margin-top: 20px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0 auto;
+  color: #1e2123;
+  padding: 12px 24px;
+  background: #ffd54f;
+  border-radius: 33px;
+}

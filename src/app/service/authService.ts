@@ -15,7 +15,7 @@ export const authApi = createApi({
     }),
     signUp: build.mutation<IAuthResp, IRegReq>({
       query: (data) => ({
-        url: '/auth/signin',
+        url: '/auth/signup',
         method: 'POST',
         body: data,
       }),
@@ -24,7 +24,7 @@ export const authApi = createApi({
       query: () => ({
         url: '/auth/',
         headers: {
-          Authorization: localStorage.getItem('token'),
+          Authorization: localStorage.getItem('token') || '',
         },
       }),
     }),

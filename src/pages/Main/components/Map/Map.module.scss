@@ -6,31 +6,36 @@
   margin-top: -30px;
   height: 440px;
 }
+
 .circle {
   position: absolute;
   right: 9%;
   margin-top: 45px;
 }
+
 .search__container {
-  padding: 75px 80px 0px;
+  padding: 75px 80px 0;
   text-align: center;
 }
+
 .search__title {
   font-weight: 700;
   font-size: 25px;
   line-height: 30px;
-  color: #ffffff;
+  color: #fff;
 }
+
 .search__subtitle {
   margin: 20px auto 23px;
   font-weight: 500;
   font-size: 16px;
   line-height: 19px;
-  color: #ffffff;
+  color: #fff;
   width: 390px;
 }
+
 .search__button {
-  background: #ffffff;
+  background: #fff;
   border-radius: 19px;
   font-weight: 600;
   font-size: 14px;
