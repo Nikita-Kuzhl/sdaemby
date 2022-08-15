@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { title } from '../../../../constant/Link'
+import { title } from '../../../../constant'
 import Menu from '../Menu/Menu'
 import styles from './Options.module.scss'
 const Options = () => {

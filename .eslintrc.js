@@ -22,7 +22,7 @@ module.exports = {
   plugins: ['react', '@typescript-eslint', 'react-hooks', 'prettier'],
   rules: {
     'react/react-in-jsx-scope': 'off',
-    camelcase: 'error',
+    camelcase: 2,
     'spaced-comment': 'error',
     quotes: ['error', 'single'],
     'no-duplicate-imports': 'error',

@@ -1,6 +1,6 @@
 import CircleGroupIcon from '../../../../components/icons/CircleGroupIcon'
 import MapIcon from '../../../../components/icons/MapIcon'
-import MapCardS from './components/MapRentCard/MapCard'
+import MapCard from './components/MapRentCard'
 import styles from './Map.module.scss'
 
 const Map = () => {
@@ -19,7 +19,7 @@ const Map = () => {
           </button>
         </div>
       </div>
-      <MapCardS />
+      <MapCard />
     </section>
   )
 }

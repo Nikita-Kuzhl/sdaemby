@@ -1,16 +1,17 @@
 import styles from './NewsList.module.scss'
-import DefaultLayout from '../../layouts/DefaultLayout/DefaultLayout'
-import HeaderNewsList from './components/HeaderNewsList/HeaderNewsList'
+import DefaultLayout from '../../layouts/DefaultLayout'
+import HeaderNewsList from './components/HeaderNewsList'
 import { useGetAllNewsQuery } from '../../app/service/newsService'
-import CardNewsList from './components/CardNewsList/CardNewsList'
+import CardNewsList from './components/CardNewsList'
 import Spinner from '../../components/Spinner'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import Pagination from '../../components/Pagination'
 import { useAppSelector } from '../../app/hooks'
 
 const NewsList = () => {
   const { page } = useAppSelector((state) => state.pagination)
-  const { data, isLoading, isError, isSuccess, isFetching } = useGetAllNewsQuery(page)
+  const [search, setSearch] = useState<string>(null)
+  const { data, isLoading, isError, isSuccess, isFetching } = useGetAllNewsQuery({ page, search })
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [isFetching])
@@ -18,7 +19,7 @@ const NewsList = () => {
     <DefaultLayout>
       <main className={styles.container} style={isFetching ? { minHeight: 400 } : {}}>
         {isSuccess && <div className={styles.bg} style={isFetching ? { display: 'none' } : {}} />}
-        <HeaderNewsList />
+        <HeaderNewsList search={setSearch} />
         <div className={styles.list}>
           {(isFetching && <Spinner />) || (isLoading && <Spinner />)}
           {isError && <p>Error Server</p>}

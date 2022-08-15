@@ -6,5 +6,6 @@ router.post('/', NewsController.add)
 router.get('/item/:id', NewsController.getById)
 router.get('/', NewsController.getAll)
 router.get('/rand/', NewsController.getThree)
+router.get('/main/', NewsController.getFive)
 
 module.exports = router

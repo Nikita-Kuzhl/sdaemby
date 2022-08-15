@@ -2,10 +2,14 @@
   margin-top: 55px;
   margin: 0 auto;
 }
-
+.spinner {
+  min-height: 628px;
+  position: relative;
+  left: 50%;
+  padding-top: 300px;
+}
 .myswiper {
-  // padding-left: 80px;
-  padding-right: 80px;
+  min-height: 618px;
 }
 
 [class$='swiper-wrapper'] {
@@ -13,11 +17,10 @@
   padding-bottom: 38px;
   padding-left: 80px;
   padding-right: 80px;
-  display: flex;
   gap: 30px;
 }
 .swiper__slide {
-  width: 406px;
+  max-width: 406px;
 }
 
 .arrow {
@@ -88,4 +91,12 @@
 .catalog__button:hover {
   background: linear-gradient(90deg, #867cfc 0%, #6929f3 94.5%);
   box-shadow: 0 15px 40px rgba(0, 96, 206, 0.15);
+}
+.error {
+  position: absolute;
+  margin-top: 80px;
+  right: 50%;
+  left: 50%;
+  font-weight: 600;
+  font-size: 30px;
 }

@@ -12,7 +12,7 @@ const TelephoneIcon: FC<IIconsProps> = ({
       width={width}
       height={height}
       viewBox='0 0 9 16'
-      fill='none'
+      fill='currentColor'
       xmlns='http://www.w3.org/2000/svg'
       className={style}
     >

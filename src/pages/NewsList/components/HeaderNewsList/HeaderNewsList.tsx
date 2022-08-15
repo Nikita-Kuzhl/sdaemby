@@ -1,12 +1,16 @@
+import { FC } from 'react'
 import { useForm } from 'react-hook-form'
 import Breadcrumbs from '../../../../components/Breadcrumbs'
 import styles from './HeaderNewsList.module.scss'
 interface IFormInput {
   value: string
 }
-const HeaderNewsList = () => {
+interface IProps {
+  search: React.Dispatch<React.SetStateAction<string>>
+}
+const HeaderNewsList: FC<IProps> = ({ search }) => {
   const { register, handleSubmit } = useForm<IFormInput>()
-  const onSubmit = (e) => console.log(e)
+  const onSubmit = (e) => search(e.value)
   return (
     <header className={styles.container}>
       <div className={styles.info}>

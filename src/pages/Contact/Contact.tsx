@@ -2,12 +2,13 @@ import FacebookIcon from '../../components/icons/FacebookIcon'
 import InstIcon from '../../components/icons/InstIcon'
 import MailIcon from '../../components/icons/MailIcon'
 import MapIcon from '../../components/icons/MapIcon'
+import TelegramIcon from '../../components/icons/TelegramIcon'
 import TelephoneIcon from '../../components/icons/TelephoneIcon'
 import ViberIcon from '../../components/icons/ViberIcon'
 import VKIcon from '../../components/icons/VKIcon'
 import WhatsUpIcon from '../../components/icons/WhatsUpIcon'
-import DefaultLayout from '../../layouts/DefaultLayout/DefaultLayout'
-import ContactForm from './components/ContactForm/ContactForm'
+import DefaultLayout from '../../layouts/DefaultLayout'
+import ContactForm from './components/ContactForm'
 import styles from './Contact.module.scss'
 
 const Contact = () => {
@@ -36,16 +37,16 @@ const Contact = () => {
                 </div>
                 <p className={styles.contact__text}>+375 29 621-48-33 </p>
                 <ul className={styles.contact__social}>
-                  <div className={styles.contact__icon}>
+                  <a href='https://www.viber.com/ru' className={styles.contact__icon}>
                     <ViberIcon />
-                  </div>
-                  <div className={styles.contact__icon}>
-                    <img src='/assets/images/telegram.svg' alt='telegram' />
-                  </div>
+                  </a>
+                  <a href='https://web.telegram.org/z/' className={styles.contact__icon}>
+                    <TelegramIcon />
+                  </a>
 
-                  <div className={styles.contact__icon}>
+                  <a href='https://www.whatsapp.com/?lang=ru' className={styles.contact__icon}>
                     <WhatsUpIcon />
-                  </div>
+                  </a>
                 </ul>
               </div>
               <div className={styles.contact__item}>
@@ -78,15 +79,15 @@ const Contact = () => {
           </div>
           <ContactForm />
           <ul className={styles.social__container}>
-            <div className={styles.social__icon}>
+            <a href='https://www.instagram.com' className={styles.social__icon}>
               <InstIcon color='white' />
-            </div>
-            <div className={styles.social__icon}>
+            </a>
+            <a href='https://vk.com/sdaem_by' className={styles.social__icon}>
               <VKIcon color='white' />
-            </div>
-            <div className={styles.social__icon}>
+            </a>
+            <a href='https://ru-ru.facebook.com' className={styles.social__icon}>
               <FacebookIcon color='white' />
-            </div>
+            </a>
           </ul>
         </div>
       </main>

@@ -7,7 +7,7 @@ const HomeIcon: FC<IIconsProps> = ({ color = '#1E2123', width = 12, height = 12 
       width={width}
       height={height}
       viewBox='0 0 12 12'
-      fill='none'
+      fill='currentColor'
       xmlns='http://www.w3.org/2000/svg'
     >
       <g clipPath='url(#clip0_2831_1150)'>

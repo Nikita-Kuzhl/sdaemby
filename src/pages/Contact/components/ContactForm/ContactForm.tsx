@@ -3,7 +3,7 @@ import UserIcon from '../../../../components/icons/UserIcon'
 import styles from './ContactForm.module.scss'
 import { useForm } from 'react-hook-form'
 import { useState } from 'react'
-import ContactModal from '../ContactModal/ContactModal'
+import ContactModal from '../ContactModal'
 
 interface IFormInputs {
   name: string
@@ -29,7 +29,7 @@ const ContactForm = () => {
         <div className={styles.data}>
           <div className={styles.input__container}>
             <label className={styles.title}>Ваше имя</label>
-            <UserIcon color='#686868' style={styles.input__icon} />
+            <UserIcon height={20} width={20} style={styles.input__icon} />
             <input
               {...register('name', { required: true, minLength: 1 })}
               name='name'
@@ -47,7 +47,7 @@ const ContactForm = () => {
           </div>
           <div className={styles.input__container}>
             <label className={styles.title}>Ваша электронная почта</label>
-            <MailIcon width={17.5} height={13.75} color='#686868' style={styles.input__icon} />
+            <MailIcon width={17.5} height={17.75} color='#686868' style={styles.input__icon} />
             <input
               {...register('email', { required: true })}
               name='email'

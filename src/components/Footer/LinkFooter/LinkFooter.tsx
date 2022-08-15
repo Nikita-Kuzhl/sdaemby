@@ -1,9 +1,12 @@
 import { Link } from 'react-router-dom'
 import styles from './LinkFooter.module.scss'
-import { city } from '../../../constant/Link/index'
-import SocialFooter from '../SocialFooter/SocialFooter'
-import PayFooter from '../PayFooter/PayFooter'
+import SocialFooter from '../SocialFooter'
+import PayFooter from '../PayFooter'
+import { useGetCityQuery } from '../../../app/service/apartService'
+import { vowels } from '../../../constant'
 const LinkFooter = () => {
+  const { data: city, isSuccess } = useGetCityQuery(null)
+
   return (
     <section className={styles.container}>
       <ul className={styles.title__list}>
@@ -21,11 +24,19 @@ const LinkFooter = () => {
       <div className={styles.apartaments}>
         <h1 className={styles.apartaments__title}>Квартиры</h1>
         <ul className={styles.apartaments__list}>
-          {city.map((item) => (
-            <Link key={item.name} to={`/${item.href}`} className={styles.apartaments__item}>
-              Квартиры в {item.name}
-            </Link>
-          ))}
+          {isSuccess &&
+            city.map((item) => (
+              <Link
+                key={item.name}
+                to={`/catalog/apart/${item.id}`}
+                className={styles.apartaments__item}
+              >
+                Квартиры в{' '}
+                {vowels.includes(item.name.slice(-1))
+                  ? item.name.substring(0, item.name.length - 1).concat('е')
+                  : item.name.concat('e')}
+              </Link>
+            ))}
         </ul>
       </div>
       <ul className={styles.pages__list}>
