@@ -41,7 +41,7 @@ const Authorization = () => {
         <h1 className={styles.title}>Авторизация</h1>
         <p className={styles.subtitle}>Авторизируйтесь, чтобы начать публиковать свои объявления</p>
         <ul className={styles.input__list}>
-          <div>
+          <div className={styles.input__item}>
             <input
               {...register('login', { required: true, minLength: 3 })}
               type='text'
@@ -63,7 +63,7 @@ const Authorization = () => {
               />
             )}
           </div>
-          <div>
+          <div className={styles.input__item}>
             <input
               {...register('password', { required: true, minLength: 6 })}
               type='password'

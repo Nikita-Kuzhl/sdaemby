@@ -1,13 +1,14 @@
 import { Link } from 'react-router-dom'
 import MapIcon from '../../icons/MapIcon'
 import styles from './TopLine.module.scss'
-import HeartIcons from '../../../assets/icons/heart.svg'
 import { useAppDispatch, useAppSelector } from '../../../app/hooks'
 import { useGetInfoUserQuery } from '../../../app/service/authService'
 import RightArrowIcon from '../../icons/RightArrowIcon'
 import { authAction } from '../../../app/features/auth'
+import HeartIcon from '../../icons/HeartIcon'
 const TopLine = () => {
   const { isAuth } = useAppSelector((state) => state.auth)
+  const { favorites } = useAppSelector((state) => state.favorite)
   const dispatch = useAppDispatch()
   const { data, isSuccess } = useGetInfoUserQuery(null)
   return (
@@ -31,9 +32,9 @@ const TopLine = () => {
         </Link>
       </ul>
       <ul className={styles.action__list}>
-        <Link to='*' className={styles.sub}>
+        <Link to='*' onClick={() => console.log('Закладки - ', favorites)} className={styles.sub}>
           Закладки
-          <img className={styles.sub_image} src={HeartIcons} alt='heart' />
+          <HeartIcon style={styles.heart__icon} width={15.7} height={15} stroke='#8291A3' />
         </Link>
         {!isAuth ? (
           <Link to='/signin' className={styles.auth}>

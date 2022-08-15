@@ -1,7 +1,7 @@
 import RightArrowIcon from '../../../../../../components/icons/RightArrowIcon'
 import styles from './MapCard.module.scss'
 
-const MapCardS = () => {
+const MapCard = () => {
   return (
     <section className={styles.container}>
       <div className={styles.card}>
@@ -66,4 +66,4 @@ const MapCardS = () => {
   )
 }
 
-export default MapCardS
+export default MapCard

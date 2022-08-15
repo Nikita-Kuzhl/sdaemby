@@ -1,4 +1,4 @@
-import FacebookIcon from '../../icons/FacebookIcon/FacebookIcon'
+import FacebookIcon from '../../icons/FacebookIcon'
 import InstIcon from '../../icons/InstIcon'
 import VKIcon from '../../icons/VKIcon'
 import styles from './SocialFooter.module.scss'

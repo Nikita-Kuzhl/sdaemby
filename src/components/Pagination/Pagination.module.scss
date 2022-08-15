@@ -9,8 +9,12 @@
   font-size: 18px;
   line-height: 22px;
   color: #686868;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
 }
-
+.item:hover {
+  border-bottom: 2px solid #e4e2e2;
+}
 .item__active {
   font-weight: 700;
   font-size: 18px;

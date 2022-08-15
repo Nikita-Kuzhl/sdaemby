@@ -7,7 +7,7 @@ const MapIcon: FC<IIconsProps> = ({ width = 8, height = 10, color = '#8291A3' })
       width={width}
       height={height}
       viewBox='0 0 9 10'
-      fill='none'
+      fill='currentColor'
       xmlns='http://www.w3.org/2000/svg'
     >
       <path
