@@ -2,14 +2,10 @@ import Select, { OnChangeValue } from 'react-select'
 import { mainAction } from '../../../../../../app/features/main'
 import { useAppDispatch } from '../../../../../../app/hooks'
 import { useGetAreaQuery, useGetMetroQuery } from '../../../../../../app/service/apartService'
+import { ISelectOnChangePropsNumber } from '../../../../../../app/types/selectTypes'
 import MetroIcon from '../../../../../../components/icons/MetroIcon'
 import SelectStyle from '../../../../../../components/SelectStyle'
 import styles from './RentHeader.module.scss'
-
-// interface Option<OptionValue=unknown>  {
-//   value: OptionValue
-//   label: string
-// }
 
 const areaCl = [
   { value: 1, label: 'Грушевка' },
@@ -57,7 +53,9 @@ const RentHeader = () => {
                 Метро
               </>
             }
-            onChange={(e: OnChangeValue<any, false>) =>
+            // eslint-disable-next-line
+            //@ts-ignore
+            onChange={(e: OnChangeValue<ISelectOnChangePropsNumber, false>) =>
               dispatch(mainAction.selectParamMetro(e.value))
             }
             options={[
@@ -81,7 +79,11 @@ const RentHeader = () => {
             styles={SelectStyle}
             className={styles.select}
             placeholder='Район'
-            onChange={(e: any) => dispatch(mainAction.selectParamArea(e.value))}
+            // eslint-disable-next-line
+            //@ts-ignore
+            onChange={(e: ISelectOnChangePropsNumber) =>
+              dispatch(mainAction.selectParamArea(e.value))
+            }
             options={[
               { value: 0, label: 'Все' },
               ...area.map((i) => {

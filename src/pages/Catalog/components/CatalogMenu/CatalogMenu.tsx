@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom'
 import Select from 'react-select'
 import { paramAction } from '../../../../app/features/param'
 import { useAppDispatch, useAppSelector } from '../../../../app/hooks'
+import { ISelectOnChangePropsNumber } from '../../../../app/types/selectTypes'
 import RightArrowIcon from '../../../../components/icons/RightArrowIcon'
 import SetingIcon from '../../../../components/icons/SettingIcon'
 import OptionMenu from '../../../../components/OptionMenu'
@@ -77,7 +78,9 @@ const CatalogMenu = () => {
                 return { value: i.value, label: i.label }
               })}
               className={styles.select}
-              onChange={(e: any) => setParam({ ...param, rooms: e.value })}
+              // eslint-disable-next-line
+              //@ts-ignore
+              onChange={(e: ISelectOnChangePropsNumber) => setParam({ ...param, rooms: e.value })}
             />
           </div>
           <div className={styles.item}>

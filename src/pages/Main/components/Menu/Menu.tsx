@@ -5,6 +5,7 @@ import Select from 'react-select'
 import { paramAction } from '../../../../app/features/param'
 import { useOutsideClick } from '../../../../app/hooks/useOutsideClick'
 import { useGetCityQuery } from '../../../../app/service/apartService'
+import { ISelectOnChangePropsNumber } from '../../../../app/types/selectTypes'
 import MapIcon from '../../../../components/icons/MapIcon'
 import RightArrowIcon from '../../../../components/icons/RightArrowIcon'
 import SetingIcon from '../../../../components/icons/SettingIcon'
@@ -83,7 +84,9 @@ const Menu: FC<IProps> = ({ heading }) => {
                 styles={SelectStyle}
                 className={styles.item__select}
                 placeholder='Выберите'
-                onChange={(e: any) => setParam({ ...param, city: e.value })}
+                // eslint-disable-next-line
+                //@ts-ignore
+                onChange={(e: ISelectOnChangePropsNumber) => setParam({ ...param, city: e.value })}
                 options={data.map((item) => {
                   return { value: item.id, label: item.name }
                 })}
@@ -99,7 +102,9 @@ const Menu: FC<IProps> = ({ heading }) => {
               styles={SelectStyle}
               placeholder='Выбирете'
               className={styles.item__select}
-              onChange={(e: any) => setParam({ ...param, rooms: e.value })}
+              // eslint-disable-next-line
+              //@ts-ignore
+              onChange={(e: ISelectOnChangePropsNumber) => setParam({ ...param, rooms: e.value })}
               options={apartRooms.map((i) => {
                 return { value: i.value, label: i.label }
               })}

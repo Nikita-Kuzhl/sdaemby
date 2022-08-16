@@ -1,6 +1,7 @@
 import React, { FC } from 'react'
 import Select from 'react-select'
 import { useGetAreaQuery, useGetMetroQuery } from '../../app/service/apartService'
+import { ISelectOnChangePropsNumber, ISelectOnChangePropsString } from '../../app/types/selectTypes'
 import { checkedApartParams, sleepingPlaces as sleepingPlacesList } from '../../constant'
 import CheckBox from '../CheckBox'
 import SelectStyle from '../SelectStyle'
@@ -45,7 +46,11 @@ const OptionMenu: FC<IProps> = ({ cityId, param, setParam, isMainPage = false })
                   ? sleepingPlacesList.filter((i) => i.value === param.sleepingPlaces)[0]
                   : ''
               }
-              onChange={(e: any) => setParam({ ...param, sleepingPlaces: e.value })}
+              // eslint-disable-next-line
+              //@ts-ignore
+              onChange={(e: ISelectOnChangePropsString) =>
+                setParam({ ...param, sleepingPlaces: e.value })
+              }
               className={styles.select}
             />
           </div>
@@ -74,7 +79,11 @@ const OptionMenu: FC<IProps> = ({ cityId, param, setParam, isMainPage = false })
                       }),
                     ]
                   }
-                  onChange={(e: any) => setParam({ ...param, area: e.value })}
+                  // eslint-disable-next-line
+                  //@ts-ignore
+                  onChange={(e: ISelectOnChangePropsNumber) =>
+                    setParam({ ...param, area: e.value })
+                  }
                   className={styles.select}
                 />
               </div>
@@ -101,7 +110,11 @@ const OptionMenu: FC<IProps> = ({ cityId, param, setParam, isMainPage = false })
                       }),
                     ]
                   }
-                  onChange={(e: any) => setParam({ ...param, metro: e.value })}
+                  // eslint-disable-next-line
+                  //@ts-ignore
+                  onChange={(e: ISelectOnChangePropsNumber) =>
+                    setParam({ ...param, metro: e.value })
+                  }
                   className={styles.select}
                 />
               </div>
