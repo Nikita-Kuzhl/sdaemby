@@ -3,6 +3,7 @@ import Select from 'react-select'
 import { paramAction } from '../../../../app/features/param'
 import { useAppDispatch, useAppSelector } from '../../../../app/hooks'
 import { useGetApartQuery } from '../../../../app/service/apartService'
+import { ISelectOnChangePropsNumber } from '../../../../app/types/selectTypes'
 import Card from '../../../../components/Card'
 import FacebookIcon from '../../../../components/icons/FacebookIcon'
 import ListIcon from '../../../../components/icons/ListsIcon'
@@ -50,7 +51,9 @@ const CatalogMain = () => {
           styles={SelectStyle}
           value={options.filter((i) => i.value === sort)[0]}
           className={styles.select}
-          onChange={(e: any) => dispatch(paramAction.selectSort(e.value))}
+          // eslint-disable-next-line
+          //@ts-ignore
+          onChange={(e: ISelectOnChangePropsNumber) => dispatch(paramAction.selectSort(e.value))}
           placeholder={
             <>
               <img src='/assets/images/sort.svg' /> Выберите

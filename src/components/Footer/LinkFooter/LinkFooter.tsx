@@ -4,9 +4,11 @@ import SocialFooter from '../SocialFooter'
 import PayFooter from '../PayFooter'
 import { useGetCityQuery } from '../../../app/service/apartService'
 import { vowels } from '../../../constant'
+import { paramAction } from '../../../app/features/param'
+import { useDispatch } from 'react-redux'
 const LinkFooter = () => {
   const { data: city, isSuccess } = useGetCityQuery(null)
-
+  const dispatch = useDispatch()
   return (
     <section className={styles.container}>
       <ul className={styles.title__list}>
@@ -30,6 +32,7 @@ const LinkFooter = () => {
                 key={item.name}
                 to={`/catalog/apart/${item.id}`}
                 className={styles.apartaments__item}
+                onClick={() => dispatch(paramAction.clearParam())}
               >
                 Квартиры в{' '}
                 {vowels.includes(item.name.slice(-1))

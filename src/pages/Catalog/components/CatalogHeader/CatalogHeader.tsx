@@ -122,7 +122,7 @@ const CatalogHeader = () => {
               </div>
             )}
             {checkbox &&
-              checkbox.length &&
+              checkbox.length >= 1 &&
               checkbox.map((item) => (
                 <div key={item} className={styles.tag__item}>
                   {checkedApartParams.find((i) => i.value === item).label}

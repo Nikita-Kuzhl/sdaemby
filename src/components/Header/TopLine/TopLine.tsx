@@ -6,6 +6,7 @@ import { useGetInfoUserQuery } from '../../../app/service/authService'
 import RightArrowIcon from '../../icons/RightArrowIcon'
 import { authAction } from '../../../app/features/auth'
 import HeartIcon from '../../icons/HeartIcon'
+import { paramAction } from '../../../app/features/param'
 const TopLine = () => {
   const { isAuth } = useAppSelector((state) => state.auth)
   const { favorites } = useAppSelector((state) => state.favorite)
@@ -14,20 +15,40 @@ const TopLine = () => {
   return (
     <nav className={styles.container}>
       <ul className={styles.list}>
-        <Link to='/' className={styles.list__item}>
+        <Link
+          onClick={() => dispatch(paramAction.clearParam())}
+          to='/'
+          className={styles.list__item}
+        >
           Главная
         </Link>
-        <Link to='/news' className={styles.list__item}>
+        <Link
+          onClick={() => dispatch(paramAction.clearParam())}
+          to='/news'
+          className={styles.list__item}
+        >
           Новости
         </Link>
-        <Link to='*' className={styles.list__item}>
+        <Link
+          onClick={() => dispatch(paramAction.clearParam())}
+          to='*'
+          className={styles.list__item}
+        >
           Размещение и тарифы
         </Link>
-        <Link to='*' className={styles.list__item}>
+        <Link
+          onClick={() => dispatch(paramAction.clearParam())}
+          to='*'
+          className={styles.list__item}
+        >
           <MapIcon style={styles.mapicon} />
           Объявления на карте
         </Link>
-        <Link to='/contact' className={styles.list__item}>
+        <Link
+          onClick={() => dispatch(paramAction.clearParam())}
+          to='/contact'
+          className={styles.list__item}
+        >
           Контакты
         </Link>
       </ul>
@@ -37,7 +58,11 @@ const TopLine = () => {
           <HeartIcon style={styles.heart__icon} width={15.7} height={15} stroke='#8291A3' />
         </Link>
         {!isAuth ? (
-          <Link to='/signin' className={styles.auth}>
+          <Link
+            to='/signin'
+            onClick={() => dispatch(paramAction.clearParam())}
+            className={styles.auth}
+          >
             Вход и регистрация
           </Link>
         ) : (
