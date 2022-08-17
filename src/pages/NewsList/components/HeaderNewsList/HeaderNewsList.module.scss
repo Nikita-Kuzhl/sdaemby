@@ -17,7 +17,7 @@
 .search__input {
   position: relative;
   background: #fff;
-  box-shadow: 0 10px 20px rgba(0, 96, 206, 0.5);
+  box-shadow: 0 10px 20px rgba(0, 96, 206, 0.05);
   border-radius: 20px;
   width: 616px;
   height: 37px;
@@ -32,11 +32,14 @@
 }
 
 .search__icon {
+  display: flex;
   align-items: center;
   position: absolute;
   background: #664ef9;
   border-radius: 19px;
-  padding: 9.5px 18px;
-  margin-left: 560px;
-  margin-top: -40px;
+  margin-left: 563px;
+  margin-top: -37px;
+  width: 53px;
+  height: 37px;
+  justify-content: center;
 }

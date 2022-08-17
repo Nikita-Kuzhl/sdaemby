@@ -9,7 +9,7 @@ import MailIcon from '../../components/icons/MailIcon'
 import UserIcon from '../../components/icons/UserIcon'
 import AuthLayout from '../../layouts/AuthLayout'
 import styles from './Registration.module.scss'
-import RegistrationModal from './RegistrationModal'
+import RegistrationModal from './components/RegistrationModal'
 
 interface IFormProps {
   login: string
@@ -52,7 +52,7 @@ const Registration = () => {
             <h1 className={styles.title}>Регистрация</h1>
             <ul className={styles.input__list}>
               {/* LOGIN */}
-              <div>
+              <div className={styles.input__item}>
                 <input
                   {...register('login', { required: true, minLength: 3 })}
                   type='text'
@@ -75,7 +75,7 @@ const Registration = () => {
                 )}
               </div>
               {/* EMAIL */}
-              <div>
+              <div className={styles.input__item}>
                 <input
                   {...register('email', { required: true, minLength: 1 })}
                   type='email'
@@ -98,7 +98,7 @@ const Registration = () => {
                 )}
               </div>
               {/* PASSWORD */}
-              <div>
+              <div className={styles.input__item}>
                 <input
                   {...register('password', { required: true, minLength: 6 })}
                   type='password'
@@ -121,7 +121,7 @@ const Registration = () => {
                 )}
               </div>
               {/* REPEAT PASSWORD */}
-              <div>
+              <div className={styles.input__item}>
                 <input
                   {...register('repeatPassword', {
                     required: true,

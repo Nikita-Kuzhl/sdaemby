@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import { IIconsProps } from '../@types'
 
-const CircleGroupIcon: FC<IIconsProps> = ({ color, style }) => {
+const CircleGroupIcon: FC<IIconsProps> = ({ color = '#FFD54F', style }) => {
   return (
     <>
       <svg

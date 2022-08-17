@@ -1,6 +1,6 @@
 import CircleGroupIcon from '../../../../components/icons/CircleGroupIcon'
-import Carousel from './components/Carousel/Carousel'
-import RentHeader from './components/RentHeader/RentHeader'
+import Carousel from './components/Carousel'
+import RentHeader from './components/RentHeader'
 import styles from './Rent.module.scss'
 const Rent = () => {
   return (

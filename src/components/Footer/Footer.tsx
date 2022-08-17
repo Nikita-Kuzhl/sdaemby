@@ -1,6 +1,6 @@
-import ContactFooter from './ContactFooter/ContactFooter'
+import ContactFooter from './ContactFooter'
 import styles from './Footer.module.scss'
-import LinkFooter from './LinkFooter/LinkFooter'
+import LinkFooter from './LinkFooter'
 const Footer = () => {
   return (
     <footer className={styles.footer}>

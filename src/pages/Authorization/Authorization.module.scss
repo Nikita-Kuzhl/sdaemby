@@ -40,7 +40,9 @@
   background: #ffd54f;
   border-radius: 33px;
 }
-
+.button:hover {
+  background: #fec100;
+}
 .switch {
   width: 34px;
   height: 20px;
@@ -110,10 +112,10 @@
   color: #686868;
   border: none;
   transition: 0.05s;
+  border: 2px solid #f7f7f7;
 }
 
 .icon {
-  color: #686868;
   position: absolute;
   display: block;
   margin-top: -35px;
@@ -121,6 +123,12 @@
 }
 .input:focus {
   border: 2px solid rgba(78, 100, 249, 0.8);
+}
+.input__item {
+  color: #cccccc;
+}
+.input__item:focus-within {
+  color: #664ef9;
 }
 
 .warning__icon {

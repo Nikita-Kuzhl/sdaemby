@@ -3,4 +3,5 @@ export interface IIconsProps {
   height?: number
   color?: string
   style?: string
+  stroke?: string
 }

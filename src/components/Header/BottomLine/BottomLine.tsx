@@ -2,7 +2,7 @@ import styles from './BottomLine.module.scss'
 import logo from '../../../assets/images/logo.png'
 import { FC } from 'react'
 import HeaderSelect from '../HeaderSelect'
-import { title } from '../../../constant/Link'
+import { title } from '../../../constant'
 
 const BottomLine: FC = () => {
   return (

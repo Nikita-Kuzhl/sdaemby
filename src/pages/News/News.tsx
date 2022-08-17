@@ -2,10 +2,10 @@ import { useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import { useGetByIdQuery } from '../../app/service/newsService'
 import Spinner from '../../components/Spinner'
-import DefaultLayout from '../../layouts/DefaultLayout/DefaultLayout'
+import DefaultLayout from '../../layouts/DefaultLayout'
 import styles from './News.module.scss'
-import NewsHeader from './components/NewsHeader/NewsHeader'
-import NewsOtherList from './components/NewsOtherList/NewsOtherList'
+import NewsHeader from './components/NewsHeader'
+import NewsOtherList from './components/NewsOtherList'
 
 const News = () => {
   const navigate = useNavigate()

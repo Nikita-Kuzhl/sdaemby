@@ -7,11 +7,11 @@ const UserIcon: FC<IIconsProps> = ({ color = '#686868', width = 20, height = 20,
       width={width}
       height={height}
       viewBox='0 0 20 20'
-      fill='currentValue'
+      fill='currentColor'
       xmlns='http://www.w3.org/2000/svg'
       className={style}
     >
-      <g opacity='0.3' clipPath='url(#clip0_2831_1581)'>
+      <g clipPath='url(#clip0_2831_1581)'>
         <path
           d='M10.0013 0C7.14418 0 4.80859 2.33559 4.80859 5.19275C4.80859 8.04991 7.14418 10.3855 10.0013 10.3855C12.8585 10.3855 15.1941 8.04991 15.1941 5.19275C15.1941 2.33559 12.8585 0 10.0013 0Z'
           fill={style ? 'currentColor' : color}

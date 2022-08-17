@@ -8,8 +8,32 @@
   box-shadow: 0 0 40px rgba(135, 124, 202, 0.3);
   border-radius: 10px;
   text-align: center;
+  z-index: 10;
 }
-
+.container__apart {
+  margin-top: -400px;
+  margin-left: -75px;
+  width: 274px;
+  height: 297px;
+  background: #fff;
+  box-shadow: 0 0 40px rgba(135, 124, 202, 0.3);
+  border-radius: 10px;
+  text-align: center;
+  position: absolute;
+  z-index: 10;
+}
+.container__list {
+  margin-left: 300px;
+  margin-top: -50px;
+  width: 274px;
+  height: 297px;
+  background: #fff;
+  box-shadow: 0 0 40px rgba(135, 124, 202, 0.3);
+  border-radius: 10px;
+  text-align: center;
+  position: absolute;
+  z-index: 10;
+}
 .avatar {
   border: 5px solid #664ef9;
   border-radius: 50%;

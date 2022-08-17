@@ -6,8 +6,10 @@ export const newsApi = createApi({
     baseUrl: process.env.REACT_APP_API,
   }),
   endpoints: (build) => ({
-    getAllNews: build.query<INews, number>({
-      query: (page) => ({ url: `/news/?page=${page}` }),
+    getAllNews: build.query<INews, { page: number; search?: string }>({
+      query: ({ page, search }) => ({
+        url: `/news/?page=${page}${search ? `&search=${search}` : ''}`,
+      }),
     }),
     getById: build.query<INewsItem, number>({
       query: (id) => ({ url: `/news/item/${id}` }),
@@ -15,6 +17,9 @@ export const newsApi = createApi({
     getThree: build.query<INewsItem[], null>({
       query: () => ({ url: '/news/rand/' }),
     }),
+    getFive: build.query<INewsItem[], null>({
+      query: () => ({ url: '/news/main' }),
+    }),
   }),
 })
-export const { useGetAllNewsQuery, useGetByIdQuery, useGetThreeQuery } = newsApi
+export const { useGetAllNewsQuery, useGetByIdQuery, useGetThreeQuery, useGetFiveQuery } = newsApi

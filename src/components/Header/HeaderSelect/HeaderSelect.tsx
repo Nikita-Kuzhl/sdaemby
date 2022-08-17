@@ -1,6 +1,10 @@
 import { FC, useRef, useState } from 'react'
+import { useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
-import { city } from '../../../constant/Link'
+import { paramAction } from '../../../app/features/param'
+import { useOutsideClick } from '../../../app/hooks/useOutsideClick'
+import { useGetCityQuery } from '../../../app/service/apartService'
+import { city, vowels } from '../../../constant'
 import MapIcon from '../../icons/MapIcon'
 import styles from './HeaderSelect.module.scss'
 
@@ -16,34 +20,50 @@ interface IProps {
 }
 
 const HeaderSelect: FC<IProps> = ({ title }) => {
+  const dispatch = useDispatch()
   const [open, setOpen] = useState(false)
+  const { data, isSuccess, isError } = useGetCityQuery(null)
+  const ref = useRef(null)
 
-  const rootEl = useRef(null)
+  useOutsideClick(ref, (e) => setOpen(e), open)
 
-  // useEffect(() => {
-  //   if (open) {
-
-  //     const onClick = () => setOpen(false);
-  //     document.addEventListener('click', onClick);
-  //     return () => document.removeEventListener('click', onClick);
-  //   }
-  // }, []);
   return (
-    <>
+    <div ref={ref}>
       <button onClick={() => setOpen(!open)} className={styles.title}>
         {title.name}
         {title.iconMap && <MapIcon width={12} height={15} color='#FFD54F' />}
       </button>
-      {open && (
-        <ul ref={rootEl} className={styles.list}>
+      {open && isSuccess && (
+        <ul className={styles.list}>
+          {data.map((item) => (
+            <Link
+              to={title.href === '1' ? `/catalog/apart/${item.id}` : '*'}
+              className={styles.list__item}
+              onClick={() => dispatch(paramAction.clearParam())}
+              key={item.id}
+            >
+              {title.src}{' '}
+              {vowels.includes(item.name.slice(-1))
+                ? item.name.substring(0, item.name.length - 1).concat('е')
+                : item.name.concat('e')}
+            </Link>
+          ))}
+        </ul>
+      )}
+      {open && isError && (
+        <ul className={styles.list}>
           {city.map((item) => (
-            <Link to='/' className={styles.list__item} key={item.href}>
+            <Link
+              to={title.href === '1' ? `/catalog/apart${item.id}` : '*'}
+              className={styles.list__item}
+              key={item.href}
+            >
               {title.src} {item.name}
             </Link>
           ))}
         </ul>
       )}
-    </>
+    </div>
   )
 }
 

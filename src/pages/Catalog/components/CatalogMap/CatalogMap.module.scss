@@ -1,0 +1,52 @@
+.container {
+  margin-top: 50px;
+  width: 100%;
+}
+.bg {
+  background: url(./../../../../assets/images/bg.png),
+    linear-gradient(0deg, #7e6af3 1.04%, #6540cd 100%);
+  filter: blur(1.5px);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 310px;
+}
+.modal {
+  width: 511px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: -235px auto 0;
+}
+.title {
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 30px;
+  text-align: center;
+  color: #ffffff;
+  margin: 0 auto;
+}
+.description {
+  margin: 20px auto 0;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  width: 319px;
+  color: #ffffff;
+}
+.button {
+  margin: 20px auto 0;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  color: #1e2123;
+  display: flex;
+  gap: 11.5px;
+  align-items: center;
+  padding: 10px 18px;
+  border-radius: 19px;
+}
+.button:hover {
+  color: #fec100;
+}

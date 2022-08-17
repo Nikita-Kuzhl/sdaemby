@@ -1,9 +1,11 @@
 import styles from './Presentation.module.scss'
-import { city } from '../../../../constant/Link'
+import { city } from '../../../../constant'
 import RightArrowIcon from '../../../../components/icons/RightArrowIcon'
 import Links from '../Links/Links'
 import { Link } from 'react-router-dom'
+import { useGetCityQuery } from '../../../../app/service/apartService'
 const Presentation = () => {
+  const { data, isSuccess, isError } = useGetCityQuery(null)
   return (
     <section className={styles.container}>
       <div className={styles.presentation}>
@@ -12,13 +14,25 @@ const Presentation = () => {
             <p className={styles.subtitle}>Снять квартиру</p>
             <h1 className={styles.title}>Квартиры на сутки</h1>
             <ul className={styles.tag__list}>
-              {city.map((item) => (
-                <button className={styles.tag__item} key={item.href}>
-                  {item.name === 'Гродное'
-                    ? item.name
-                    : item.name.substring(0, item.name.length - 1)}
-                </button>
-              ))}
+              {isSuccess &&
+                !isError &&
+                data.map((item) => (
+                  <Link to={`/catalog/apart/${item.id}`} className={styles.tag__item} key={item.id}>
+                    {item.name}
+                  </Link>
+                ))}
+              {isError &&
+                city.map((item) => (
+                  <Link
+                    to={`/catalog/apart/${item.id}`}
+                    className={styles.tag__item}
+                    key={item.href}
+                  >
+                    {item.name === 'Гродное'
+                      ? item.name
+                      : item.name.substring(0, item.name.length - 1)}
+                  </Link>
+                ))}
             </ul>
           </div>
           <div

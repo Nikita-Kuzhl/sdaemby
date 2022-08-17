@@ -26,10 +26,19 @@ const Metro = sequelize.define('metro', {
 Metro.belongsTo(City)
 const Aparttment = sequelize.define('apartment', {
   outside: DataTypes.STRING,
+  img: DataTypes.STRING,
   price: DataTypes.INTEGER,
   rooms: DataTypes.INTEGER,
   square: DataTypes.INTEGER,
+  sleepingPlaces: DataTypes.STRING,
   description: DataTypes.STRING,
+  status: { type: DataTypes.ENUM('Standart', 'Gold'), defaultValue: 'Gold' },
+  gas_stove: { type: DataTypes.ENUM('0', '1'), defaultValue: '0' },
+  oven: { type: DataTypes.ENUM('0', '1'), defaultValue: '0' },
+  coffee_maker: { type: DataTypes.ENUM('0', '1'), defaultValue: '0' },
+  microwave: { type: DataTypes.ENUM('0', '1'), defaultValue: '0' },
+  tableware: { type: DataTypes.ENUM('0', '1'), defaultValue: '0' },
+  dishwasher: { type: DataTypes.ENUM('0', '1'), defaultValue: '0' },
 })
 Aparttment.belongsTo(User)
 Aparttment.belongsTo(City)

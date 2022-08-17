@@ -1,9 +1,9 @@
 import CircleGroupIcon from '../../../../components/icons/CircleGroupIcon'
-import ApartmentsMinsk from './components/ApartmentsMinsk/ApartmentsMinsk'
-import NewsFeed from './components/NewsFeed/NewsFeed'
+import ApartmentsMinsk from './components/ApartmentsMinsk'
+import NewsFeed from './components/NewsFeed'
 import styles from './News.module.scss'
 
-const News = () => {
+const NewsMain = () => {
   return (
     <section className={styles.container}>
       <CircleGroupIcon style={styles.circle} color='#FFD54F' />
@@ -16,4 +16,4 @@ const News = () => {
   )
 }
 
-export default News
+export default NewsMain

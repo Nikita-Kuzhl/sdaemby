@@ -6,7 +6,7 @@ const VKIcon: FC<IIconsProps> = ({ width = 25, height = 15, color = '#1E2123', s
       width={width}
       height={height}
       viewBox='0 0 25 15'
-      fill='currentValue'
+      fill='currentColor'
       xmlns='http://www.w3.org/2000/svg'
       className={style}
     >
