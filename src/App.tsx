@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router-dom'
+import { Route, Routes, useLocation } from 'react-router-dom'
 import { useAppSelector } from './app/hooks'
 import Authorization from './pages/Authorization'
 import Catalog from './pages/Catalog'
@@ -9,6 +9,15 @@ import News from './pages/News'
 import NewsList from './pages/NewsList'
 import Registration from './pages/Registration'
 import './styles/index.scss'
+import 'swiper/scss'
+import 'swiper/scss/navigation'
+import 'swiper/scss/pagination'
+export const LocationDisplay = () => {
+  const location = useLocation()
+
+  return <div data-testid='location-display'>{location.pathname}</div>
+}
+
 const App = () => {
   const { isAuth } = useAppSelector((state) => state.auth)
   return (

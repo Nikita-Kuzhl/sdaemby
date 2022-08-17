@@ -6,7 +6,7 @@ const Options = () => {
   const [heading, setHeading] = useState(title[0].name)
 
   return (
-    <section className={styles.container}>
+    <section data-testid='main page' className={styles.container}>
       <h1 className={styles.title}>
         Sdaem.by - у нас живут <span>ваши объявления</span>
       </h1>

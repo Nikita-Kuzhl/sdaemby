@@ -34,18 +34,26 @@
     "typescript": "^4.4.2",
     "web-vitals": "^2.1.0"
   },
+  "jest": {
+    "moduleNameMapper": {
+      "swiper/scss": "swiper/swiper.scss",
+      "swiper/scss/navigation": "swiper/modules/navigation/navigation.scss",
+      "swiper/scss/pagination": "swiper/modules/pagination/pagination.scss"
+    },
+    "transformIgnorePatterns": [
+      "/<rootDir>/node_modules/"
+    ]
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --watchAll --detectOpenHandles --collectCoverage --env=jsdom",
     "eject": "react-scripts eject",
     "check": "prettier --check .",
     "write": "prettier --write .",
     "fix": "prettier --fix .",
     "lint": "./node_modules/.bin/eslint \"**/*.{ts,tsx}\"",
-    "lint:fix": "./node_modules/.bin/eslint --fix \"**/*.{ts,tsx}\"",
-    "check-types": "tsc",
-    "jtest": "jest"
+    "lint:fix": "./node_modules/.bin/eslint --fix \"**/*.{ts,tsx}\""
   },
   "husky": {
     "hooks": {

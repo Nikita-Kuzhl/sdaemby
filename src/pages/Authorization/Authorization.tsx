@@ -37,7 +37,7 @@ const Authorization = () => {
   }, [result.isSuccess])
   return (
     <AuthLayout>
-      <form onSubmit={handleSubmit(onSubmit)} className={styles.container}>
+      <form data-testid='auth page' onSubmit={handleSubmit(onSubmit)} className={styles.container}>
         <h1 className={styles.title}>Авторизация</h1>
         <p className={styles.subtitle}>Авторизируйтесь, чтобы начать публиковать свои объявления</p>
         <ul className={styles.input__list}>

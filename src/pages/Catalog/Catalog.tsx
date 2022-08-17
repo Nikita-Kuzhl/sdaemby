@@ -9,7 +9,7 @@ import CatalogMenu from './components/CatalogMenu'
 const Catalog = () => {
   return (
     <DefaultLayout>
-      <main className={styles.main}>
+      <main data-testid='catalog page' className={styles.main}>
         <CatalogHeader />
         <CatalogMenu />
         <CatalogMain />

@@ -12,8 +12,6 @@ import ModalContact from '../ModalContact'
 import styles from './ItemList.module.scss'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Pagination } from 'swiper'
-import 'swiper/scss'
-import 'swiper/scss/pagination'
 import { useOutsideClick } from '../../app/hooks/useOutsideClick'
 interface IProps {
   item: IApartment

@@ -47,7 +47,7 @@ const Registration = () => {
   return (
     <AuthLayout>
       {!open ? (
-        <main className={styles.container}>
+        <main data-testid='registration page' className={styles.container}>
           <form onSubmit={handleSubmit(onSubmit)}>
             <h1 className={styles.title}>Регистрация</h1>
             <ul className={styles.input__list}>

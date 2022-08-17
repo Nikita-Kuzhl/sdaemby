@@ -1,8 +1,5 @@
 import styles from './Carousel.module.scss'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import 'swiper/scss'
-import 'swiper/scss/navigation'
-import 'swiper/scss/pagination'
 import SwiperCore, { Navigation } from 'swiper'
 import { useState } from 'react'
 import RightArrowIcon from '../../../../../../components/icons/RightArrowIcon'

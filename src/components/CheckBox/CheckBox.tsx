@@ -7,7 +7,10 @@ interface IProps {
 
 const CheckBox: FC<IProps> = ({ active }) => {
   return (
-    <section className={active ? styles.container__active : styles.container}>
+    <section
+      data-testid='checkbox'
+      className={active ? styles.container__active : styles.container}
+    >
       <img src='/assets/images/check.svg' />
     </section>
   )

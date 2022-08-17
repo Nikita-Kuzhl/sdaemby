@@ -17,7 +17,11 @@ const NewsList = () => {
   }, [isFetching])
   return (
     <DefaultLayout>
-      <main className={styles.container} style={isFetching ? { minHeight: 400 } : {}}>
+      <main
+        data-testid='newslist page'
+        className={styles.container}
+        style={isFetching ? { minHeight: 400 } : {}}
+      >
         {isSuccess && <div className={styles.bg} style={isFetching ? { display: 'none' } : {}} />}
         <HeaderNewsList search={setSearch} />
         <div className={styles.list}>

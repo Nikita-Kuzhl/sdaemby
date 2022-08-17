@@ -7,14 +7,14 @@ const Error = () => {
   return (
     <>
       <DefaultLayout>
-        <main className={styles.container}>
+        <main data-testid='error page' className={styles.container}>
           <CircleGroupIcon color='#FFD54F' style={styles.circle__gold} />
           <div className={styles.titles}>
             <h1 className={styles.title}>Ошибка 404</h1>
             <p className={styles.subtitle}>
               Возможно, у вас опечатка в адресе страницы, или её просто не существует
             </p>
-            <button type='button' className={styles.button}>
+            <button data-testid='button to home' type='button' className={styles.button}>
               <HomeIcon />
               Вернуться на главную
             </button>

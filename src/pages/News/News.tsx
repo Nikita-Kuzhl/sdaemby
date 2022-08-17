@@ -24,7 +24,7 @@ const News = () => {
       {isSuccess && <div className={styles.bg} />}
       {isError && <p>Error Server</p>}
 
-      <main className={styles.container}>
+      <main data-testid='news page' className={styles.container}>
         {isSuccess && data !== null && (
           <>
             <NewsHeader name={data.name} date={data.date} />

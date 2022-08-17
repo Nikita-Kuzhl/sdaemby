@@ -14,7 +14,7 @@ import styles from './Contact.module.scss'
 const Contact = () => {
   return (
     <DefaultLayout>
-      <main className={styles.bg}>
+      <main data-testid='contact page' className={styles.bg}>
         <div className={styles.container}>
           <div className={styles.info__container}>
             <h1 className={styles.title}>Контакты</h1>
