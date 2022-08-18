@@ -103,9 +103,18 @@ const Card: FC<IProps> = ({ item, isApartPage = false }) => {
         </p>
       </main>
       <p className={styles.line}></p>
-      <footer ref={ref} style={isApartPage ? { marginTop: 13 } : {}} className={styles.footer}>
+      <footer
+        data-testid='card footer'
+        ref={ref}
+        style={isApartPage ? { marginTop: 13 } : {}}
+        className={styles.footer}
+      >
         {isApartPage && (
-          <button onClick={() => handleClickFavorite()} className={styles.button__heart}>
+          <button
+            data-testid='button add favorite'
+            onClick={() => handleClickFavorite()}
+            className={styles.button__heart}
+          >
             <HeartIcon
               width={15}
               height={15}
@@ -114,6 +123,7 @@ const Card: FC<IProps> = ({ item, isApartPage = false }) => {
           </button>
         )}
         <button
+          data-testid='button open modal contact'
           style={isApartPage ? { background: '#F8F8F8', boxShadow: 'none' } : {}}
           className={styles.button__contact}
           onClick={() => setOpen(!open)}

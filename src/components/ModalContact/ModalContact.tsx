@@ -19,6 +19,7 @@ interface IProps {
 const ModalContact: FC<IProps> = ({ user, isApartPage = false, isListStyle = false }) => {
   return (
     <div
+      data-testid='modal contact'
       className={clsx(
         !isApartPage && !isListStyle && styles.container,
         isApartPage && styles.container__apart,

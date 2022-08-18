@@ -37,11 +37,11 @@ export const paramSlice = createSlice({
   initialState,
   reducers: {
     selectCheckbox: (state: ParamState, action: PayloadAction<string[]>) => {
-      if (action.payload.length < 1) {
-        sessionStorage.removeItem('checkbox')
-        state.checkbox = []
-        return
-      }
+      // if (action.payload.length < 1) {
+      //   sessionStorage.removeItem('checkbox')
+      //   state.checkbox = []
+      //   return
+      // }
       state.checkbox = action.payload
       sessionStorage.setItem('checkbox', JSON.stringify(state.checkbox))
     },
@@ -54,58 +54,58 @@ export const paramSlice = createSlice({
       state.list = String(action.payload)
     },
     selectArea: (state: ParamState, action: PayloadAction<number>) => {
-      if (action.payload === undefined) {
-        sessionStorage.removeItem('area')
-        return (state.area = null)
-      }
+      // if (action.payload === undefined) {
+      //   sessionStorage.removeItem('area')
+      //   return (state.area = null)
+      // }
       sessionStorage.setItem('area', String(action.payload))
       state.area = action.payload
     },
     selectRooms: (state: ParamState, action: PayloadAction<number>) => {
-      if (action.payload === undefined) {
-        sessionStorage.removeItem('rooms')
-        return (state.rooms = null)
-      }
+      // if (action.payload === undefined) {
+      //   sessionStorage.removeItem('rooms')
+      //   return (state.rooms = null)
+      // }
       sessionStorage.setItem('rooms', String(action.payload))
       state.rooms = action.payload
     },
     selectPriceTo: (state: ParamState, action: PayloadAction<number>) => {
-      if (action.payload === undefined) {
-        sessionStorage.removeItem('priceTo')
-        return (state.priceTo = null)
-      }
+      // if (action.payload === undefined) {
+      //   sessionStorage.removeItem('priceTo')
+      //   return (state.priceTo = null)
+      // }
       sessionStorage.setItem('priceTo', String(action.payload))
       state.priceTo = action.payload
     },
     selectPriceFrom: (state: ParamState, action: PayloadAction<number>) => {
-      if (action.payload === undefined) {
-        sessionStorage.removeItem('priceFrom')
-        return (state.priceFrom = null)
-      }
+      // if (action.payload === undefined) {
+      //   sessionStorage.removeItem('priceFrom')
+      //   return (state.priceFrom = null)
+      // }
       sessionStorage.setItem('priceFrom', String(action.payload))
       state.priceFrom = action.payload
     },
     selectMetro: (state: ParamState, action: PayloadAction<number>) => {
-      if (action.payload === undefined) {
-        sessionStorage.removeItem('metro')
-        return (state.metro = null)
-      }
+      // if (action.payload === undefined) {
+      //   sessionStorage.removeItem('metro')
+      //   return (state.metro = null)
+      // }
       sessionStorage.setItem('metro', String(action.payload))
       state.metro = action.payload
     },
     selectSleepingPlaces: (state: ParamState, action: PayloadAction<string>) => {
-      if (action.payload === undefined) {
-        sessionStorage.removeItem('sleepingPlaces')
-        return (state.sleepingPlaces = null)
-      }
+      // if (action.payload === undefined) {
+      //   sessionStorage.removeItem('sleepingPlaces')
+      //   return (state.sleepingPlaces = null)
+      // }
       sessionStorage.setItem('sleepingPlaces', String(action.payload))
       state.sleepingPlaces = action.payload
     },
     selectSort: (state: ParamState, action: PayloadAction<number>) => {
-      if (action.payload === null) {
-        sessionStorage.removeItem('sort')
-        return (state.sort = null)
-      }
+      // if (action.payload === null) {
+      //   sessionStorage.removeItem('sort')
+      //   return (state.sort = null)
+      // }
       sessionStorage.setItem('sort', String(action.payload))
       state.sort = action.payload
     },

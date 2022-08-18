@@ -12,6 +12,7 @@ import './styles/index.scss'
 import 'swiper/scss'
 import 'swiper/scss/navigation'
 import 'swiper/scss/pagination'
+// Проверка маршрутов для тестирования
 export const LocationDisplay = () => {
   const location = useLocation()
 

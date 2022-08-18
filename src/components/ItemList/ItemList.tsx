@@ -91,6 +91,7 @@ const ItemList: FC<IProps> = ({ item }) => {
         <div ref={ref} className={styles.action__container}>
           <div className={styles.action__buttons}>
             <button
+              data-testid='button open modal contact list'
               style={{ background: '#F8F8F8', boxShadow: 'none' }}
               className={styles.button__contact}
               onClick={() => setOpen(!open)}
@@ -99,12 +100,20 @@ const ItemList: FC<IProps> = ({ item }) => {
               Контакты
             </button>
             {favorites.includes(item.id) ? (
-              <button onClick={() => handleClickFavorite()} className={styles.heart__button}>
+              <button
+                data-testid='button add favorite list active'
+                onClick={() => handleClickFavorite()}
+                className={styles.heart__button}
+              >
                 <p>Добавлено</p>
                 <HeartIcon style={styles.heart__icon_active} width={15} height={15} />
               </button>
             ) : (
-              <button onClick={() => handleClickFavorite()} className={styles.heart__button}>
+              <button
+                data-testid='button add favorite list'
+                onClick={() => handleClickFavorite()}
+                className={styles.heart__button}
+              >
                 <p>В закладки</p>
                 <HeartIcon style={styles.heart__icon} width={15} height={15} />
               </button>
