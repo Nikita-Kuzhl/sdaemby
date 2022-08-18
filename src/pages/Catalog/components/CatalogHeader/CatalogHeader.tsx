@@ -62,7 +62,7 @@ const CatalogHeader = () => {
                   className={styles.button__cross}
                   onClick={() => dispatch(paramAction.selectRooms(null))}
                 >
-                  &#9587;
+                  <img alt='cross' src='/assets/images/cross.png' />
                 </button>
               </div>
             )}
@@ -73,7 +73,7 @@ const CatalogHeader = () => {
                   className={styles.button__cross}
                   onClick={() => dispatch(paramAction.selectPriceFrom(null))}
                 >
-                  &#9587;
+                  <img alt='cross' src='/assets/images/cross.png' />
                 </button>
               </div>
             )}
@@ -84,7 +84,7 @@ const CatalogHeader = () => {
                   className={styles.button__cross}
                   onClick={() => dispatch(paramAction.selectPriceTo(null))}
                 >
-                  &#9587;
+                  <img alt='cross' src='/assets/images/cross.png' />
                 </button>
               </div>
             )}
@@ -95,7 +95,7 @@ const CatalogHeader = () => {
                   className={styles.button__cross}
                   onClick={() => dispatch(paramAction.selectArea(null))}
                 >
-                  &#9587;
+                  <img alt='cross' src='/assets/images/cross.png' />
                 </button>
               </div>
             )}
@@ -106,7 +106,7 @@ const CatalogHeader = () => {
                   className={styles.button__cross}
                   onClick={() => dispatch(paramAction.selectMetro(null))}
                 >
-                  &#9587;
+                  <img alt='cross' src='/assets/images/cross.png' />
                 </button>
               </div>
             )}
@@ -117,7 +117,7 @@ const CatalogHeader = () => {
                   className={styles.button__cross}
                   onClick={() => dispatch(paramAction.selectSleepingPlaces(null))}
                 >
-                  &#9587;
+                  <img alt='cross' src='/assets/images/cross.png' />
                 </button>
               </div>
             )}
@@ -130,7 +130,7 @@ const CatalogHeader = () => {
                     className={styles.button__cross}
                     onClick={() => dispatch(paramAction.delChecbox(item))}
                   >
-                    &#9587;
+                    <img alt='cross' src='/assets/images/cross.png' />
                   </button>
                 </div>
               ))}
