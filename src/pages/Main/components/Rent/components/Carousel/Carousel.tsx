@@ -33,7 +33,8 @@ const Carousel = () => {
           <Swiper
             className={styles.myswiper}
             slideClass={styles.swiper__slide}
-            slidesPerView={3}
+            slidesPerView='auto'
+            width={80}
             navigation={{ prevEl, nextEl }}
           >
             {isSuccess &&

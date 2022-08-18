@@ -23,6 +23,7 @@ test('route catalog', () => {
     </MemoryRouter>,
   )
   expect(screen.getByTestId('catalog page')).toBeInTheDocument()
+  expect(screen.getByTestId('location-display')).toHaveTextContent('/catalog/apart/1')
 })
 test('route auth', () => {
   render(
@@ -33,6 +34,7 @@ test('route auth', () => {
     </MemoryRouter>,
   )
   expect(screen.getByTestId('auth page')).toBeInTheDocument()
+  expect(screen.getByTestId('location-display')).toHaveTextContent('/signin')
 })
 test('route registration', () => {
   render(
@@ -43,6 +45,7 @@ test('route registration', () => {
     </MemoryRouter>,
   )
   expect(screen.getByTestId('registration page')).toBeInTheDocument()
+  expect(screen.getByTestId('location-display')).toHaveTextContent('/signup')
 })
 test('route contact', () => {
   render(
@@ -53,6 +56,7 @@ test('route contact', () => {
     </MemoryRouter>,
   )
   expect(screen.getByTestId('contact page')).toBeInTheDocument()
+  expect(screen.getByTestId('location-display')).toHaveTextContent('/contact')
 })
 test('route news', () => {
   render(
@@ -63,6 +67,7 @@ test('route news', () => {
     </MemoryRouter>,
   )
   expect(screen.getByTestId('newslist page')).toBeInTheDocument()
+  expect(screen.getByTestId('location-display')).toHaveTextContent('/news')
 })
 test('route news item', () => {
   render(
@@ -73,6 +78,7 @@ test('route news item', () => {
     </MemoryRouter>,
   )
   expect(screen.getByTestId('news page')).toBeInTheDocument()
+  expect(screen.getByTestId('location-display')).toHaveTextContent('/news/1')
 })
 test('route error', () => {
   render(
@@ -83,4 +89,5 @@ test('route error', () => {
     </MemoryRouter>,
   )
   expect(screen.getByTestId('error page')).toBeInTheDocument()
+  expect(screen.getByTestId('location-display')).toHaveTextContent('/asdasdkjndas')
 })

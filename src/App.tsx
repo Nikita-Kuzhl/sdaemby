@@ -21,28 +21,31 @@ export const LocationDisplay = () => {
 const App = () => {
   const { isAuth } = useAppSelector((state) => state.auth)
   return (
-    <Routes>
-      {/* Главная страница */}
-      <Route path='/' element={<Main />} />
-      {/* Страница контакты */}
-      <Route path='/contact' element={<Contact />} />
-      {/* Страница со списком новостей */}
-      <Route path='/news' element={<NewsList />} />
-      {/* Страница отдельной новости(статьи) */}
-      <Route path='/news/:id' element={<News />} />
-      {/* Страница каталога для квартир */}
-      <Route path='/catalog/apart/:id' element={<Catalog />} />
-      {!isAuth && (
-        <>
-          {/* Авторизация */}
-          <Route path='/signin' element={<Authorization />} />
-          {/* Регистрация */}
-          <Route path='/signup' element={<Registration />} />
-        </>
-      )}
-      {/* Страница 404 */}
-      <Route path='*' element={<Error />} />
-    </Routes>
+    <>
+      <Routes>
+        {/* Главная страница */}
+        <Route path='/' element={<Main />} />
+        {/* Страница контакты */}
+        <Route path='/contact' element={<Contact />} />
+        {/* Страница со списком новостей */}
+        <Route path='/news' element={<NewsList />} />
+        {/* Страница отдельной новости(статьи) */}
+        <Route path='/news/:id' element={<News />} />
+        {/* Страница каталога для квартир */}
+        <Route path='/catalog/apart/:id' element={<Catalog />} />
+        {!isAuth && (
+          <>
+            {/* Авторизация */}
+            <Route path='/signin' element={<Authorization />} />
+            {/* Регистрация */}
+            <Route path='/signup' element={<Registration />} />
+          </>
+        )}
+        {/* Страница 404 */}
+        <Route path='*' element={<Error />} />
+      </Routes>
+      <LocationDisplay />
+    </>
   )
 }
 
