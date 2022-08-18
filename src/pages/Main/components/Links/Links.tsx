@@ -12,7 +12,7 @@ const Links = () => {
         <h3 className={styles.title}>Квартиры</h3>
         <ul className={styles.list}>
           {city.map((item) => (
-            <Link key={item.href} to={`/catalog/apart${item.id}`} className={styles.item}>
+            <Link key={item.href} to={`/catalog/apart/${item.id}`} className={styles.item}>
               Квартиры в{' '}
               {vowels.includes(item.name.slice(-1))
                 ? item.name.substring(0, item.name.length - 1).concat('е')
