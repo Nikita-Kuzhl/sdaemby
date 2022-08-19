@@ -1,5 +1,6 @@
 import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
+import { act } from 'react-dom/test-utils'
 import { Provider } from 'react-redux'
 import { BrowserRouter } from 'react-router-dom'
 import Card from '../'
@@ -40,19 +41,23 @@ const item = {
     name: 'Заводской',
   },
 }
-render(
-  <Provider store={store}>
-    <BrowserRouter>
-      <Card isApartPage={true} item={item} />
-    </BrowserRouter>
-  </Provider>,
-)
 test('render card components', () => {
+  act(() => {
+    render(
+      <Provider store={store}>
+        <BrowserRouter>
+          <Card isApartPage={true} item={item} />
+        </BrowserRouter>
+      </Provider>,
+    )
+  })
   const buttonFav = screen.getByTestId('button add favorite')
   userEvent.click(buttonFav)
   expect(store.getState().favorite.favorites).toEqual([1])
   userEvent.click(buttonFav)
-  expect(store.getState().favorite.favorites).toEqual([])
+  act(() => {
+    expect(store.getState().favorite.favorites).toEqual([])
+  })
   const buttonModalOpen = screen.getByTestId('button open modal contact')
   userEvent.click(buttonModalOpen)
   expect(screen.getByTestId('modal contact')).toBeInTheDocument()

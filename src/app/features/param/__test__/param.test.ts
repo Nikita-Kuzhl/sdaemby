@@ -81,8 +81,8 @@ describe('param redux state', () => {
       priceFrom: null,
       metro: null,
       sleepingPlaces: null,
-      sort: 2,
-      list: 'true',
+      sort: 2 || null,
+      list: 'true' || null,
     })
   })
 })

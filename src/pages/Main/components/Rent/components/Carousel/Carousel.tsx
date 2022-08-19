@@ -7,6 +7,7 @@ import Card from '../../../../../../components/Card'
 import { useGetApartQuery } from '../../../../../../app/service/apartService'
 import Spinner from '../../../../../../components/Spinner'
 import { useAppSelector } from '../../../../../../app/hooks'
+import { Link } from 'react-router-dom'
 
 SwiperCore.use([Navigation])
 
@@ -32,7 +33,7 @@ const Carousel = () => {
         <div>
           <Swiper
             className={styles.myswiper}
-            slideClass={styles.swiper__slide}
+            // slideClass={styles.swiper__slide}
             slidesPerView='auto'
             width={80}
             navigation={{ prevEl, nextEl }}
@@ -65,9 +66,9 @@ const Carousel = () => {
           </h1>
           <p className={styles.quantity__subtitle}>Предложений по Минску</p>
         </div>
-        <button className={styles.catalog__button}>
+        <Link to={'/catalog/apart/1'} className={styles.catalog__button}>
           Посмотреть все <RightArrowIcon color='white' />
-        </button>
+        </Link>
       </div>
     </section>
   )

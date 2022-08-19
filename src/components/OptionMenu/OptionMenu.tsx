@@ -30,14 +30,20 @@ const OptionMenu: FC<IProps> = ({ cityId, param, setParam, isMainPage = false })
 
   return (
     <section
+      data-testid='option menu'
       className={styles.container}
       style={isMainPage ? { width: 1060, borderRadius: '0 0 10px 10px' } : {}}
     >
       <div className={styles.main} style={isMainPage ? { width: 1060, paddingLeft: 20 } : {}}>
         <ul className={styles.tag__list}>
-          <div className={styles.tag__item}>
-            <p className={styles.tag__title}>Спальные места</p>
+          <form data-tesid='select sleeping places' className={styles.tag__item}>
+            <label htmlFor='sleeping places' className={styles.tag__title}>
+              Спальные места
+            </label>
+            {/*  */}
             <Select
+              name='sleeping places'
+              inputId='sleeping places'
               placeholder='Выберите'
               styles={SelectStyle}
               options={sleepingPlacesList}
@@ -53,7 +59,7 @@ const OptionMenu: FC<IProps> = ({ cityId, param, setParam, isMainPage = false })
               }
               className={styles.select}
             />
-          </div>
+          </form>
           {!isMainPage && (
             <>
               <div className={styles.tag__item}>
