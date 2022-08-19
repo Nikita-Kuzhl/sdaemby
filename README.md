@@ -29,7 +29,7 @@
 
 ## Описание
 
-### Тесты находятся в ветки ![Tests](https://github.com/Nikita-Kuzhl/sdaemby/tree/tests)
+### Тесты находятся в ветки [Tests](https://github.com/Nikita-Kuzhl/sdaemby/tree/tests)
 
 ### Дерево проекта
 
