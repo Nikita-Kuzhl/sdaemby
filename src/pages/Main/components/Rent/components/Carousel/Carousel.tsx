@@ -35,7 +35,7 @@ const Carousel = () => {
         <div>
           <Swiper
             className={styles.myswiper}
-            slideClass={styles.swiper__slide}
+            //slideClass={styles.swiper__slide}
             slidesPerView='auto'
             width={80}
             navigation={{ prevEl, nextEl }}
