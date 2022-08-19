@@ -6,6 +6,8 @@
 
 ### CLIENT
 
+Перед запуском удалите содержимое в LocalStorage и SessionStorage
+
 ```console
 > yarn install
 > yarn start
