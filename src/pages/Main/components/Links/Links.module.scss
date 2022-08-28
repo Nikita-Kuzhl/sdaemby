@@ -1,0 +1,64 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 585px;
+}
+
+.title {
+  margin-top: 40px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  color: #333;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5px;
+}
+
+.item {
+  margin-top: 10px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #feb700;
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+}
+.item:hover {
+  padding-left: 10px;
+}
+
+.quantity {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: right;
+  color: #bdbdbd;
+}
+.apartments {
+  margin-top: -40px;
+}
+
+.button__yet {
+  text-align: left;
+  margin-top: 15px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #feb700;
+  cursor: pointer;
+  display: flex;
+  gap: 5.5px;
+  align-items: center;
+  border-bottom: 1px solid #f5bc03;
+  width: 45px;
+  padding-bottom: 3px;
+}
+
+.icon {
+  transform: rotate(90deg);
+}

@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 80px;
+}
+
+.select__list {
+  margin-top: 60px;
+  display: flex;
+  gap: 30px;
+}
+.select {
+  [class$='control'] {
+    background: #ffffff;
+    border-color: #ffffff;
+  }
+}
+.title {
+  margin-top: 15px;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 30px;
+}
+
+.subtitle {
+  margin-top: 33px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  background: linear-gradient(90deg, #9d94ff 0%, #6b50e9 94.5%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.select {
+  width: 185px;
+  height: 40px;
+}

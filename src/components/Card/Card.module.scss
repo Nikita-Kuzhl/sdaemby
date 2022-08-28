@@ -1,0 +1,243 @@
+@mixin tag_text {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #686868;
+}
+@mixin swiper_arrow {
+  color: white;
+  width: 28.5px;
+  height: 28.5px;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 23px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  width: 406px;
+  display: block;
+  height: 520px;
+  background: #fffefe;
+  border-radius: 10px;
+  box-shadow: (0 20px 20px rgba(39, 95, 158, 0.15));
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  width: 406px;
+  background: #e4e2e2;
+  border-radius: 10px;
+}
+
+.status {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  color: #fff;
+  text-shadow: 0 1px 0 rgba(147, 79, 0, 0.3);
+  background: linear-gradient(106.06deg, #ffd54f 1.12%, #fec100 97.96%);
+  border-radius: 0 10px 10px;
+  position: absolute;
+  padding: 7.5px 12px;
+  margin-left: 342px;
+  z-index: 5;
+}
+.main {
+  margin: 20px 20px 12px;
+}
+
+.info__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price__item {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: #664ef9;
+}
+
+.price__description {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #bdbdbd;
+}
+
+.tag__list {
+  display: flex;
+  gap: 7px;
+  align-items: center;
+}
+
+.tag {
+  @include tag_text;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #f8f8f8;
+  border-radius: 18px;
+  padding: 9px 8px;
+}
+
+.street {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000;
+  display: flex;
+  gap: 11px;
+  align-items: center;
+  margin-top: 27px;
+}
+
+.metro__container {
+  margin-top: 11px;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.metro__item {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000;
+}
+
+.description {
+  margin-top: 20px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: #8291a3;
+  height: 72px;
+  display: flex;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.line {
+  margin: 12px 20px 7px;
+  background: #664ef9;
+  opacity: 0.1;
+  height: 1px;
+}
+
+.footer {
+  margin: 0 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.button__contact {
+  display: flex;
+  gap: 13px;
+  padding: 10px 15px;
+  align-items: center;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  color: #664ef9;
+  box-shadow: 0 5px 20px rgba(0, 96, 206, 0.1);
+  border-radius: 18px;
+  cursor: pointer;
+}
+.button__contact:hover {
+  background: #f5f3ff;
+}
+
+.button__more {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  color: #fec100;
+  padding: 10px 15px;
+  background: rgba(255, 213, 79, 0.1);
+  border-radius: 17px;
+  cursor: pointer;
+}
+.button__more:hover {
+  background: rgba(255, 213, 79, 0.2);
+}
+.img {
+  border-radius: 10px;
+  width: 100%;
+  height: 226px;
+}
+.button__heart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background: rgba(235, 87, 87, 0.1);
+  border-radius: 22px;
+  .icon__heart {
+    color: #fdeeee;
+  }
+
+  .icon__heart_active {
+    color: #eb5757;
+  }
+}
+.button__heart:hover {
+  .icon__heart {
+    color: #f6b2b2;
+  }
+}
+.swiper__container {
+  border-radius: 10px;
+  width: 100%;
+  height: 226px;
+  background: #e4e2e2;
+  [class$='swiper-wrapper'] {
+    padding: 0;
+    display: flex;
+    gap: 0;
+  }
+  [class$='swiper-button-prev'] {
+    @include swiper_arrow;
+  }
+  [class$='swiper-button-prev']::after {
+    color: white;
+    margin-left: -2px;
+    font-size: 16px;
+    font-feature-settings: normal;
+  }
+  [class$='swiper-button-next'] {
+    @include swiper_arrow;
+  }
+  [class$='swiper-button-next']::after {
+    color: white;
+    margin-left: 2px;
+    font-size: 16px;
+    font-feature-settings: normal;
+  }
+  [class$='swiper-button-disabled'] {
+    opacity: 1;
+    @include swiper_arrow;
+  }
+  [class$='swiper-button-disabled']::after {
+    color: white;
+    margin-left: 2px;
+    font-size: 16px;
+  }
+  [class$='swiper-pagination-bullet'] {
+    opacity: 0.5;
+    background: #c5c5c5;
+  }
+  [class$='swiper-pagination-bullet-active'] {
+    background: #ffffff;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+  }
+}
